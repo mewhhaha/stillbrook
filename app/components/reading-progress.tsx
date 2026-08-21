@@ -1,0 +1,3 @@
+"use client";
+import { useEffect, useState } from "react";
+export function ReadingProgress() { const [progress, setProgress] = useState(0); useEffect(() => { const update = () => { const max = document.documentElement.scrollHeight - innerHeight; setProgress(max > 0 ? scrollY / max : 0); }; update(); addEventListener("scroll", update, { passive: true }); return () => removeEventListener("scroll", update); }, []); return <div className="fixed inset-x-0 top-0 z-50 h-0.5 bg-zinc-950/5 dark:bg-white/10" aria-hidden="true"><div className="h-full origin-left bg-orange-600 [transform:scaleX(var(--reading-progress))]" style={{ "--reading-progress": progress } as React.CSSProperties} /></div>; }

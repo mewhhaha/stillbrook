@@ -1,0 +1,168 @@
+@import "tailwindcss";
+/* Self-hosted fonts: no third-party requests, and no edge HTML rewriting
+   (Cloudflare Fonts) needed — which breaks hydration on a React-rendered
+   document. */
+@font-face {
+  font-family: "InterVariable";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("/fonts/InterVariable.woff2") format("woff2");
+}
+@font-face {
+  font-family: "InterVariable";
+  font-style: italic;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("/fonts/InterVariable-Italic.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Lora";
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url("/fonts/Lora-normal-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Lora";
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url("/fonts/Lora-normal-latin-ext.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Inter Fixation";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/InterVariable-Fixation.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Inter Fixation";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/InterVariable-Italic-Fixation.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Lora Fixation";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/Lora-normal-latin-Fixation.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Lora Fixation";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/Lora-normal-latin-ext-Fixation.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Lora Fixation";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/Lora-italic-latin-Fixation.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Lora Fixation";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/Lora-italic-latin-ext-Fixation.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Lora";
+  font-style: italic;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url("/fonts/Lora-italic-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Lora";
+  font-style: italic;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url("/fonts/Lora-italic-latin-ext.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@theme {
+  --font-sans: "InterVariable", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-sans--font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  --font-display: "Lora", Georgia, serif;
+  --font-mono: ui-monospace, "SFMono-Regular", Consolas, monospace;
+}
+/* Dark mode: an explicit data-theme cookie override wins; otherwise follow the system preference. */
+@custom-variant dark {
+  &:where([data-theme="dark"], [data-theme="dark"] *) { @slot; }
+  @media (prefers-color-scheme: dark) {
+    &:where(:root:not([data-theme="light"]), :root:not([data-theme="light"]) *) { @slot; }
+  }
+}
+@utility prose {
+  color: var(--color-zinc-700); font-size: var(--text-base); line-height: --spacing(7);
+  & > * + * { margin-top: --spacing(6); }
+  & h1, & h2, & h3, & h4, & h5, & h6 { color: var(--color-zinc-950); font-family: var(--font-display); font-weight: var(--font-weight-medium); }
+  & h1 { font-size: var(--text-4xl); letter-spacing: var(--tracking-tight); }
+  & h2 { margin-top: --spacing(12); font-size: var(--text-2xl); letter-spacing: var(--tracking-tight); }
+  & h3 { margin-top: --spacing(10); font-size: var(--text-xl); }
+  & h4, & h5, & h6 { margin-top: --spacing(8); font-size: var(--text-lg); }
+  & p { text-wrap: pretty; }
+  & :where(p, li, blockquote, figcaption, td) a { color: var(--color-orange-700); text-decoration-line: underline; text-underline-offset: 4px; @variant hover { color: var(--color-orange-800); } }
+  & ul { padding-left: --spacing(6); list-style-type: disc; }
+  & ol { padding-left: --spacing(6); list-style-type: decimal; }
+  & li + li { margin-top: --spacing(2); }
+  & strong { color: var(--color-zinc-950); font-weight: var(--font-weight-semibold); }
+  & > blockquote { border-left: 3px solid var(--color-orange-500); padding-left: --spacing(5); color: var(--color-zinc-800); font-family: var(--font-display); font-style: italic; }
+  & :not(pre) > code { border-radius: var(--radius-sm); background: var(--color-zinc-100); padding: --spacing(0.5) --spacing(1); font-family: var(--font-mono); font-size: 0.875em; }
+  & kbd { border: 1px solid var(--color-zinc-300); border-bottom-width: 2px; border-radius: var(--radius-sm); background: var(--color-zinc-50); padding: --spacing(0.5) --spacing(1.5); color: var(--color-zinc-800); font-family: var(--font-mono); font-size: 0.8125em; }
+  & > pre { overflow-x: auto; border-radius: var(--radius-lg); background: var(--color-zinc-950); padding: --spacing(5); color: var(--color-zinc-100); }
+  & > pre code { background: transparent; padding: 0; color: inherit; }
+  & img { border-radius: min(1vw, 12px); }
+  @variant dark {
+    color: var(--color-zinc-300);
+    & h1, & h2, & h3, & h4, & h5, & h6 { color: var(--color-zinc-50); }
+    & :where(p, li, blockquote, figcaption, td) a { color: var(--color-orange-400); @variant hover { color: var(--color-orange-300); } }
+    & strong { color: var(--color-zinc-50); }
+    & > blockquote { color: var(--color-zinc-200); }
+    & :not(pre) > code { background: var(--color-zinc-800); color: var(--color-zinc-200); }
+    & kbd { border-color: var(--color-zinc-700); background: var(--color-zinc-900); color: var(--color-zinc-200); }
+    & > pre { background: var(--color-zinc-900); }
+  }
+}
+/* Chart palette: CVD-validated categorical slots, stepped per surface. Assign in order, never cycled. */
+:root {
+  --chart-1: #2a78d6; --chart-2: #1baf7a; --chart-3: #eda100; --chart-4: #008300;
+  --chart-5: #4a3aa7; --chart-6: #e34948; --chart-7: #e87ba4; --chart-8: #eb6834;
+  @variant dark {
+    --chart-1: #3987e5; --chart-2: #199e70; --chart-3: #c98500; --chart-4: #008300;
+    --chart-5: #9085e9; --chart-6: #e66767; --chart-7: #d55181; --chart-8: #d95926;
+  }
+}
+/* These faces use contextual alternates to emphasize word prefixes without
+   changing the article's text or DOM. Deliberate emphasis keeps its usual face. */
+[data-fixation="true"] .prose :where(p, li, figcaption, dt, dd) {
+  font-family: "Inter Fixation", "InterVariable", "Inter", ui-sans-serif, system-ui, sans-serif;
+  font-feature-settings: "calt" 1;
+}
+[data-fixation="true"] .prose blockquote,
+[data-fixation="true"] .prose blockquote :where(p, li, figcaption, dt, dd) {
+  font-family: "Lora Fixation", "Lora", Georgia, serif;
+  font-feature-settings: "calt" 1;
+}
+[data-fixation="true"] .prose :where(p, li, figcaption, dt, dd) :where(b, strong) {
+  font-family: "InterVariable", "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+[data-fixation="true"] .prose blockquote :where(b, strong) {
+  font-family: "Lora", Georgia, serif;
+}
+html { color-scheme: light; @variant dark { color-scheme: dark; } }
+body { margin: 0; background: var(--color-white); color: var(--color-zinc-950); @variant dark { background: var(--color-zinc-950); color: var(--color-zinc-100); } }

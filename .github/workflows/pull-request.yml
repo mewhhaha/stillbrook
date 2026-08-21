@@ -1,0 +1,101 @@
+name: Pull request checks
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
+  push:
+    branches: [main]
+permissions:
+  contents: read
+concurrency:
+  group: checks-${{ github.ref }}
+  cancel-in-progress: true
+env:
+  # Validation only needs LFS pointers. Downloading every historical image and
+  # font makes CI depend on the repository's LFS bandwidth quota.
+  GIT_LFS_SKIP_SMUDGE: "1"
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          lfs: false
+          # The article-updates plugin derives "Updated" datelines from git
+          # history at build time; a shallow clone silently undercounts.
+          fetch-depth: 0
+      - uses: pnpm/action-setup@v5
+        with:
+          run_install: false
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 24
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm validate
+      - run: pnpm exec wrangler deploy --dry-run
+      - name: Git LFS check
+        run: |
+          if git lfs ls-files --name-only | grep -q .; then
+            echo "This repository no longer uses Git LFS. Move the file to R2 or commit it as a regular Git file."
+            exit 1
+          fi
+  upload-article-images:
+    if: >-
+      github.event_name == 'pull_request' &&
+      github.event.pull_request.author_association == 'OWNER' &&
+      github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    environment: production
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+          ref: ${{ github.event.pull_request.head.ref }}
+      - uses: pnpm/action-setup@v5
+        with:
+          run_install: false
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 24
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - name: Upload and remove article images
+        env:
+          IMAGES_SECRET: ${{ secrets.IMAGES_SECRET }}
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+        run: |
+          mapfile -d '' -t image_paths < <(git diff --name-only -z --diff-filter=AM "$BASE_SHA" HEAD -- public/images/articles)
+          if [ ${#image_paths[@]} -eq 0 ]; then
+            echo "No changed article image files to upload."
+          else
+            pnpm images:upload
+            git rm -- "${image_paths[@]}"
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git commit -m "Upload article media"
+            git push
+          fi
+
+          mapfile -d '' -t route_paths < <(git diff --name-only -z --diff-filter=AM "$BASE_SHA" HEAD -- 'app/routes/articles.*')
+          if [ ${#route_paths[@]} -gt 0 ]; then
+            pnpm images:verify -- "${route_paths[@]}"
+          fi
+  merge:
+    # Squash-merge owner PRs once validation passes. Draft PRs are the opt-out:
+    # they validate but stay open until marked ready for review.
+    if: >-
+      github.event_name == 'pull_request' &&
+      github.event.pull_request.draft == false &&
+      github.event.pull_request.author_association == 'OWNER'
+    needs: [validate, upload-article-images]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - run: gh pr merge --squash --delete-branch "$PR_URL"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_URL: ${{ github.event.pull_request.html_url }}

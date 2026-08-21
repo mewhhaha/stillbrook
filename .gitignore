@@ -1,0 +1,10 @@
+node_modules
+.claude
+.agents/skills/
+.wrangler
+.react-router
+.types
+.dev.vars*
+.env*
+dist
+build

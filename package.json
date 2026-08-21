@@ -1,0 +1,51 @@
+{
+  "name": "still-brook-23ea",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "vite build",
+    "check:articles": "tsx scripts/validate-articles.ts",
+    "deploy": "pnpm build && wrangler deploy",
+    "dev": "vite dev",
+    "images:upload": "tsx scripts/upload-article-images.ts",
+    "images:verify": "tsx scripts/verify-article-images.ts",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "typecheck": "react-router typegen && tsc --noEmit",
+    "validate": "pnpm check:articles && pnpm check:highlight && pnpm lint && pnpm typecheck && pnpm build",
+    "check:highlight": "tsx scripts/check-highlight.ts"
+  },
+  "dependencies": {
+    "@react-router/fs-routes": "^8.2.0",
+    "@remix-run/node-fetch-server": "^0.13.0",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
+    "react-router": "^8.2.0"
+  },
+  "devDependencies": {
+    "@cloudflare/vite-plugin": "^1.44.0",
+    "@eslint/js": "^9.39.2",
+    "@react-router/dev": "^8.2.0",
+    "@tailwindcss/vite": "^4.2.2",
+    "@types/node": "^24.5.2",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.3",
+    "@vitejs/plugin-rsc": "~0.5.27",
+    "@webgpu/types": "^0.1.71",
+    "eslint": "^9.39.2",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "eslint-plugin-react-refresh": "^0.4.26",
+    "globals": "^16.5.0",
+    "sharp": "^0.34.5",
+    "tailwindcss": "^4.2.2",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.56.1",
+    "vite": "^8.1.4",
+    "vite-plugin-devtools-json": "^1.0.0",
+    "wrangler": "^4.110.0"
+  },
+  "packageManager": "pnpm@11.11.0+sha512.4463f65fd80ed80d69bc1d4bf163ee94f605c7380fc318bb5b2ebe15f8cd12d49c51a4d59e951b401e764d3b6ca751cbf51bc50ed7001a6bcb4935e684c34882"
+}

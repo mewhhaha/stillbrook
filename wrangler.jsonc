@@ -1,0 +1,27 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "still-brook-23ea",
+  "workers_dev": false,
+  "preview_urls": false,
+  "main": "./app/entry.rsc.tsx",
+  "compatibility_date": "2026-07-11",
+  "compatibility_flags": ["nodejs_compat"],
+  "secrets": {
+    "required": ["IMAGES_SECRET"]
+  },
+  "r2_buckets": [
+    {
+      "binding": "ARTICLE_IMAGES",
+      "bucket_name": "still-brook-images"
+    }
+  ],
+  "assets": {
+    "directory": "./build/client",
+    "run_worker_first": ["/images/articles/*"]
+  },
+  "observability": {
+    "enabled": true,
+    "head_sampling_rate": 1
+  },
+  "upload_source_maps": true
+}

@@ -1,0 +1,6 @@
+rust/target/release/scan 430848
+rust/target/release/tree 431440
+rust/target/release/map 445760
+odin/scan-odin 222000
+odin/tree-odin 222000
+odin/map-odin 230648

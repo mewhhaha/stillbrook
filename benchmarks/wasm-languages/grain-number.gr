@@ -1,0 +1,52 @@
+module BenchmarkNumber
+
+provide let rec fib = (n: Number) => {
+  if (n < 2) n else fib(n - 1) + fib(n - 2)
+}
+
+provide let primes = (limit: Number) => {
+  let mut count = 0
+  let mut candidate = 2
+  while (candidate < limit) {
+    let mut isPrime = 1
+    let mut divisor = 2
+    while (divisor * divisor <= candidate) {
+      if (candidate % divisor == 0) {
+        isPrime = 0
+        break
+      }
+      divisor += 1
+    }
+    count += isPrime
+    candidate += 1
+  }
+  count
+}
+
+provide let mandelbrot = (width: Number, height: Number, maxIterations: Number) => {
+  let stepX = 3.0 / width
+  let stepY = 3.0 / height
+  let mut checksum = 0
+  let mut y = 0
+
+  while (y < height) {
+    let ci = -1.5 + (y + 0.5) * stepY
+    let mut x = 0
+    while (x < width) {
+      let cr = -2.0 + (x + 0.5) * stepX
+      let mut zr = 0.0
+      let mut zi = 0.0
+      let mut iterations = 0
+      while (iterations < maxIterations && zr * zr + zi * zi <= 4.0) {
+        let nextZr = zr * zr - zi * zi + cr
+        zi = 2.0 * zr * zi + ci
+        zr = nextZr
+        iterations += 1
+      }
+      checksum += iterations
+      x += 1
+    }
+    y += 1
+  }
+  checksum
+}

@@ -1,0 +1,502 @@
+name: Research Rust and Odin
+
+on:
+  push:
+    branches:
+      - article/two-kinds-of-control
+
+permissions:
+  contents: write
+
+jobs:
+  benchmark:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: article/two-kinds-of-control
+      - uses: dtolnay/rust-toolchain@stable
+      - name: Install tools and Odin
+        shell: bash
+        run: |
+          set -euxo pipefail
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq hyperfine jq unzip time >/dev/null
+
+          tag=dev-2026-07a
+          curl -sS -L --fail "https://api.github.com/repos/odin-lang/Odin/releases/tags/${tag}" -o /tmp/odin-release.json
+          asset=$(jq -r '.assets[] | select(.name | test("ubuntu-amd64|linux-amd64|linux_amd64"; "i")) | .browser_download_url' /tmp/odin-release.json | head -1)
+          test -n "$asset"
+          curl -sS -L --fail --retry 3 "$asset" -o /tmp/odin-package
+          mkdir -p /tmp/odin
+          case "$asset" in
+            *.zip) unzip -q /tmp/odin-package -d /tmp/odin ;;
+            *) tar -xf /tmp/odin-package -C /tmp/odin ;;
+          esac
+          odin_bin=$(find /tmp/odin -type f -name odin -perm -111 | head -1)
+          test -n "$odin_bin"
+          sudo ln -sf "$odin_bin" /usr/local/bin/odin
+          rustc -Vv
+          cargo -V
+          odin version
+      - name: Generate matched benchmark sources
+        shell: bash
+        run: |
+          set -euxo pipefail
+          root=/tmp/rust-odin
+          rm -rf "$root"
+          mkdir -p "$root/runtime/rust/src/bin" "$root/runtime/odin" "$root/compile"
+
+          cat > "$root/runtime/rust/Cargo.toml" <<'EOF'
+          [package]
+          name = "rust-odin-runtime"
+          version = "0.1.0"
+          edition = "2024"
+
+          [profile.release]
+          codegen-units = 1
+          lto = "thin"
+          panic = "abort"
+          EOF
+
+          cat > "$root/runtime/rust/src/bin/scan.rs" <<'EOF'
+          const N: usize = 8_000_000;
+          const ROUNDS: usize = 12;
+
+          fn main() {
+              let mut data = vec![0_u64; N];
+              let mut seed = 0x9e37_79b9_7f4a_7c15_u64;
+              for item in &mut data {
+                  seed ^= seed >> 12;
+                  seed ^= seed << 25;
+                  seed ^= seed >> 27;
+                  seed = seed.wrapping_mul(0x2545_f491_4f6c_dd1d);
+                  *item = seed;
+              }
+
+              let mut checksum = 0_u64;
+              for round in 0..ROUNDS {
+                  for (i, item) in data.iter_mut().enumerate() {
+                      let mut x = *item;
+                      x ^= x >> 13;
+                      x = x.wrapping_mul(0xbf58_476d_1ce4_e5b9);
+                      if x & 1 == 0 {
+                          x = x.rotate_left(17).wrapping_add((i ^ round) as u64);
+                      } else {
+                          x ^= x << 7;
+                      }
+                      *item = x;
+                      checksum = checksum.wrapping_add(x ^ i as u64);
+                  }
+              }
+              println!("{checksum}");
+          }
+          EOF
+
+          cat > "$root/runtime/odin/scan.odin" <<'EOF'
+          package main
+
+          import "core:fmt"
+
+          N :: 8_000_000
+          ROUNDS :: 12
+
+          main :: proc() {
+              data := make([]u64, N)
+              defer delete(data)
+
+              seed: u64 = 0x9e37_79b9_7f4a_7c15
+              for i in 0..<N {
+                  seed ~= seed >> 12
+                  seed ~= seed << 25
+                  seed ~= seed >> 27
+                  seed *= 0x2545_f491_4f6c_dd1d
+                  data[i] = seed
+              }
+
+              checksum: u64
+              for round in 0..<ROUNDS {
+                  for i in 0..<N {
+                      x := data[i]
+                      x ~= x >> 13
+                      x *= 0xbf58_476d_1ce4_e5b9
+                      if x & 1 == 0 {
+                          x = ((x << 17) | (x >> 47)) + u64(i ~ round)
+                      } else {
+                          x ~= x << 7
+                      }
+                      data[i] = x
+                      checksum += x ~ u64(i)
+                  }
+              }
+              fmt.println(checksum)
+          }
+          EOF
+
+          cat > "$root/runtime/rust/src/bin/tree.rs" <<'EOF'
+          const NODES: usize = (1 << 22) - 1;
+          const ROUNDS: usize = 10;
+
+          #[derive(Clone, Copy)]
+          struct Node {
+              left: i32,
+              right: i32,
+              value: u64,
+          }
+
+          fn mix(mut x: u64) -> u64 {
+              x ^= x >> 30;
+              x = x.wrapping_mul(0xbf58_476d_1ce4_e5b9);
+              x ^= x >> 27;
+              x = x.wrapping_mul(0x94d0_49bb_1331_11eb);
+              x ^ (x >> 31)
+          }
+
+          fn main() {
+              let mut nodes = vec![Node { left: -1, right: -1, value: 0 }; NODES];
+              for (i, node) in nodes.iter_mut().enumerate() {
+                  let left = i * 2 + 1;
+                  let right = left + 1;
+                  node.left = if left < NODES { left as i32 } else { -1 };
+                  node.right = if right < NODES { right as i32 } else { -1 };
+                  node.value = mix(i as u64 + 1);
+              }
+
+              let mut checksum = 0_u64;
+              let mut stack = [0_i32; 64];
+              for round in 0..ROUNDS {
+                  let mut top = 1_usize;
+                  stack[0] = 0;
+                  while top > 0 {
+                      top -= 1;
+                      let index = stack[top] as usize;
+                      let node = nodes[index];
+                      checksum = checksum.wrapping_add(node.value ^ round as u64);
+                      if node.right >= 0 {
+                          stack[top] = node.right;
+                          top += 1;
+                      }
+                      if node.left >= 0 {
+                          stack[top] = node.left;
+                          top += 1;
+                      }
+                  }
+              }
+              println!("{checksum}");
+          }
+          EOF
+
+          cat > "$root/runtime/odin/tree.odin" <<'EOF'
+          package main
+
+          import "core:fmt"
+
+          NODES :: (1 << 22) - 1
+          ROUNDS :: 10
+
+          Node :: struct {
+              left:  i32,
+              right: i32,
+              value: u64,
+          }
+
+          mix :: proc(x_: u64) -> u64 {
+              x := x_
+              x ~= x >> 30
+              x *= 0xbf58_476d_1ce4_e5b9
+              x ~= x >> 27
+              x *= 0x94d0_49bb_1331_11eb
+              return x ~ (x >> 31)
+          }
+
+          main :: proc() {
+              nodes := make([]Node, NODES)
+              defer delete(nodes)
+              for i in 0..<NODES {
+                  left := i*2 + 1
+                  right := left + 1
+                  nodes[i].left = i32(left) if left < NODES else -1
+                  nodes[i].right = i32(right) if right < NODES else -1
+                  nodes[i].value = mix(u64(i+1))
+              }
+
+              checksum: u64
+              stack: [64]i32
+              for round in 0..<ROUNDS {
+                  top := 1
+                  stack[0] = 0
+                  for top > 0 {
+                      top -= 1
+                      index := int(stack[top])
+                      node := nodes[index]
+                      checksum += node.value ~ u64(round)
+                      if node.right >= 0 {
+                          stack[top] = node.right
+                          top += 1
+                      }
+                      if node.left >= 0 {
+                          stack[top] = node.left
+                          top += 1
+                      }
+                  }
+              }
+              fmt.println(checksum)
+          }
+          EOF
+
+          cat > "$root/runtime/rust/src/bin/map.rs" <<'EOF'
+          use std::collections::HashMap;
+
+          const N: usize = 1_500_000;
+          const ROUNDS: usize = 5;
+
+          fn mix(mut x: u64) -> u64 {
+              x ^= x >> 30;
+              x = x.wrapping_mul(0xbf58_476d_1ce4_e5b9);
+              x ^= x >> 27;
+              x = x.wrapping_mul(0x94d0_49bb_1331_11eb);
+              x ^ (x >> 31)
+          }
+
+          fn main() {
+              let mut map = HashMap::with_capacity(N);
+              for i in 0..N {
+                  let key = mix(i as u64 + 0x9e37_79b9);
+                  map.insert(key, key.rotate_left(21) ^ i as u64);
+              }
+
+              let mut checksum = 0_u64;
+              for round in 0..ROUNDS {
+                  for i in 0..N {
+                      let key = mix(i as u64 + 0x9e37_79b9);
+                      checksum = checksum.wrapping_add(
+                          map.get(&key).copied().unwrap_or(0) ^ round as u64,
+                      );
+                  }
+              }
+              println!("{checksum}");
+          }
+          EOF
+
+          cat > "$root/runtime/odin/map.odin" <<'EOF'
+          package main
+
+          import "core:fmt"
+
+          N :: 1_500_000
+          ROUNDS :: 5
+
+          mix :: proc(x_: u64) -> u64 {
+              x := x_
+              x ~= x >> 30
+              x *= 0xbf58_476d_1ce4_e5b9
+              x ~= x >> 27
+              x *= 0x94d0_49bb_1331_11eb
+              return x ~ (x >> 31)
+          }
+
+          main :: proc() {
+              values := make(map[u64]u64, N)
+              defer delete(values)
+              for i in 0..<N {
+                  key := mix(u64(i) + 0x9e37_79b9)
+                  values[key] = ((key << 21) | (key >> 43)) ~ u64(i)
+              }
+
+              checksum: u64
+              for round in 0..<ROUNDS {
+                  for i in 0..<N {
+                      key := mix(u64(i) + 0x9e37_79b9)
+                      value, ok := values[key]
+                      if ok {
+                          checksum += value ~ u64(round)
+                      }
+                  }
+              }
+              fmt.println(checksum)
+          }
+          EOF
+
+          cat > "$root/compile/generate.py" <<'EOF'
+          from pathlib import Path
+
+          root = Path(__file__).parent
+          rust = root / "rust"
+          odin = root / "odin"
+          (rust / "src").mkdir(parents=True, exist_ok=True)
+          odin.mkdir(parents=True, exist_ok=True)
+          (rust / "Cargo.toml").write_text(
+              '[package]\nname="compile-fixture"\nversion="0.1.0"\nedition="2024"\n'
+              '\n[profile.release]\ncodegen-units=1\nlto="thin"\npanic="abort"\n'
+          )
+          rust_mods = []
+          rust_calls = []
+          odin_calls = []
+          for i in range(256):
+              name = f"m{i:03d}"
+              rust_mods.append(f"mod {name};")
+              rust_calls.append(f"    x = {name}::run(x);")
+              odin_calls.append(f"    x = run_{i:03d}(x)")
+              (rust / "src" / f"{name}.rs").write_text(f'''\
+          #[inline(never)]
+          pub fn run(mut x: u64) -> u64 {{
+              for j in 0..64_u64 {{
+                  x ^= x >> 11;
+                  x = x.wrapping_mul(0x9e3779b97f4a7c15_u64 ^ {i + 1}_u64);
+                  x = x.rotate_left(((j + {i}_u64) & 63) as u32);
+              }}
+              x
+          }}
+          // toggle-a
+          ''')
+              (odin / f"{name}.odin").write_text(f'''\
+          package main
+
+                    run_{i:03d} :: proc(x_: u64) -> u64 {{
+              x := x_
+              for j: u64 = 0; j < 64; j += 1 {{
+                  x ~= x >> 11
+                  x *= 0x9e3779b97f4a7c15 ~ {i + 1}
+                  shift := (j + {i}) & 63
+                  x = (x << shift) | (x >> (64-shift)) if shift != 0 else x
+              }}
+              return x
+          }}
+          // toggle-a
+          ''')
+          (rust / "src" / "main.rs").write_text(
+              "\n".join(rust_mods) + "\n\nfn main() {\n    let mut x = 1_u64;\n" +
+              "\n".join(rust_calls) + '\n    println!("{x}");\n}\n'
+          )
+          (odin / "main.odin").write_text(
+              'package main\n\nimport "core:fmt"\n\nmain :: proc() {\n    x: u64 = 1\n' +
+              "\n".join(odin_calls) + '\n    fmt.println(x)\n}\n'
+          )
+          EOF
+          python3 "$root/compile/generate.py"
+
+          cat > "$root/compile/toggle.py" <<'EOF'
+          from pathlib import Path
+          import sys
+          for arg in sys.argv[1:]:
+              path = Path(arg)
+              text = path.read_text()
+              path.write_text(text.replace("toggle-a", "toggle-b") if "toggle-a" in text else text.replace("toggle-b", "toggle-a"))
+          EOF
+
+          cat > "$root/compile/tiny.rs" <<'EOF'
+          fn main() { println!("{}", (0_u64..1000).sum::<u64>()); }
+          EOF
+          cat > "$root/compile/tiny.odin" <<'EOF'
+          package main
+          import "core:fmt"
+          main :: proc() {
+              sum: u64
+              for i: u64 = 0; i < 1000; i += 1 { sum += i }
+              fmt.println(sum)
+          }
+          EOF
+      - name: Compile and verify sources
+        shell: bash
+        run: |
+          set -euxo pipefail
+          root=/tmp/rust-odin
+          cd "$root/runtime/rust"
+          cargo build --release --quiet
+          cd "$root/runtime/odin"
+          odin build scan.odin -file -o:speed -out:scan-odin
+          odin build tree.odin -file -o:speed -out:tree-odin
+          odin build map.odin -file -o:speed -out:map-odin
+
+          for bench in scan tree map; do
+            rust_out=$("$root/runtime/rust/target/release/$bench")
+            odin_out=$("$root/runtime/odin/$bench-odin")
+            echo "$bench rust=$rust_out odin=$odin_out"
+            test "$rust_out" = "$odin_out"
+          done
+
+          cd "$root/compile/rust"
+          cargo build --quiet
+          cargo build --release --quiet
+          cd "$root/compile"
+          odin build odin -debug -o:none -out:odin-dev
+          odin build odin -o:speed -out:odin-release
+      - name: Benchmark compilation and runtime
+        shell: bash
+        run: |
+          set -euxo pipefail
+          root=/tmp/rust-odin
+          out="$GITHUB_WORKSPACE/.article-research/rust-odin"
+          rm -rf "$out"
+          mkdir -p "$out"
+
+          cd "$root/compile"
+          hyperfine --warmup 2 --runs 10 --export-json "$out/compile-tiny.json" \
+            --command-name 'rustc tiny' 'rustc tiny.rs -o tiny-rust' \
+            --command-name 'odin tiny' 'odin build tiny.odin -file -out:tiny-odin'
+
+          hyperfine --warmup 1 --runs 5 --export-json "$out/compile-dev-clean.json" \
+            --command-name 'cargo dev clean' --prepare 'rm -rf rust/target' 'cd rust && cargo build --quiet' \
+            --command-name 'odin dev clean' --prepare 'rm -f odin-dev' 'odin build odin -debug -o:none -out:odin-dev'
+
+          hyperfine --warmup 1 --runs 5 --export-json "$out/compile-release-clean.json" \
+            --command-name 'cargo release clean' --prepare 'rm -rf rust/target' 'cd rust && cargo build --release --quiet' \
+            --command-name 'odin speed clean' --prepare 'rm -f odin-release' 'odin build odin -o:speed -out:odin-release'
+
+          cd rust && cargo build --quiet && cd ..
+          odin build odin -debug -o:none -out:odin-dev
+          hyperfine --warmup 1 --runs 10 --export-json "$out/compile-edit.json" \
+            --command-name 'cargo one-file edit' --prepare 'python3 toggle.py rust/src/m255.rs odin/m255.odin' 'cd rust && cargo build --quiet' \
+            --command-name 'odin one-file edit' --prepare 'python3 toggle.py rust/src/m255.rs odin/m255.odin' 'odin build odin -debug -o:none -out:odin-dev'
+
+          cd "$root/runtime"
+          hyperfine --warmup 3 --runs 10 --export-json "$out/runtime-scan.json" \
+            --command-name 'rust scan' './rust/target/release/scan' \
+            --command-name 'odin scan' './odin/scan-odin'
+          hyperfine --warmup 3 --runs 10 --export-json "$out/runtime-tree.json" \
+            --command-name 'rust tree' './rust/target/release/tree' \
+            --command-name 'odin tree' './odin/tree-odin'
+          hyperfine --warmup 3 --runs 10 --export-json "$out/runtime-map.json" \
+            --command-name 'rust map' './rust/target/release/map' \
+            --command-name 'odin map' './odin/map-odin'
+
+          for bench in scan tree map; do
+            /usr/bin/time -f '%M' -o "$out/rss-rust-$bench.txt" "./rust/target/release/$bench" >/dev/null
+            /usr/bin/time -f '%M' -o "$out/rss-odin-$bench.txt" "./odin/$bench-odin" >/dev/null
+          done
+          stat -c '%n %s' rust/target/release/{scan,tree,map} odin/{scan-odin,tree-odin,map-odin} > "$out/binary-sizes.txt"
+
+          {
+            echo '# Rust and Odin benchmark run'
+            echo
+            echo 'Runner: GitHub Actions ubuntu-latest'
+            echo
+            echo '```text'
+            rustc -Vv
+            cargo -V
+            odin version
+            lscpu | grep -E 'Model name|CPU\(s\)|Thread|Core|Socket' || true
+            echo '```'
+            echo
+            for file in compile-tiny compile-dev-clean compile-release-clean compile-edit runtime-scan runtime-tree runtime-map; do
+              echo "## $file"
+              jq -r '.results[] | "- \(.command): median=\(.median)s mean=\(.mean)s min=\(.min)s max=\(.max)s"' "$out/$file.json"
+              echo
+            done
+            echo '## Peak RSS (KiB)'
+            for bench in scan tree map; do
+              echo "- $bench: Rust $(cat "$out/rss-rust-$bench.txt"), Odin $(cat "$out/rss-odin-$bench.txt")"
+            done
+            echo
+            echo '## Binary sizes (bytes)'
+            cat "$out/binary-sizes.txt"
+          } > "$out/results.md"
+      - name: Commit benchmark evidence
+        run: |
+          git add .article-research/rust-odin
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'Record Rust and Odin benchmark evidence'
+          git push origin HEAD:article/two-kinds-of-control

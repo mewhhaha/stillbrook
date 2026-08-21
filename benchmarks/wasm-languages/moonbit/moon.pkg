@@ -1,0 +1,7 @@
+options(
+  "link": {
+    "wasm": {
+      "exports": ["fib", "primes", "mandelbrot"]
+    }
+  }
+)

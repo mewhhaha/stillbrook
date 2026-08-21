@@ -1,0 +1,93 @@
+module BenchmarkPrimitives
+
+from "int32" include Int32
+from "float64" include Float64
+
+let rec fibInt32 = (n: Int32) => {
+  if (Int32.(<)(n, 2l)) {
+    n
+  } else {
+    Int32.(+)(
+      fibInt32(Int32.(-)(n, 1l)),
+      fibInt32(Int32.(-)(n, 2l)),
+    )
+  }
+}
+
+provide let fib = (n: Number) => Int32.toNumber(fibInt32(Int32.fromNumber(n)))
+
+let primesInt32 = (limit: Int32) => {
+  let mut count = 0l
+  let mut candidate = 2l
+  while (Int32.(<)(candidate, limit)) {
+    let mut isPrime = 1l
+    let mut divisor = 2l
+    while (Int32.(<=)(Int32.(*)(divisor, divisor), candidate)) {
+      if (Int32.(==)(Int32.(%)(candidate, divisor), 0l)) {
+        isPrime = 0l
+        break
+      }
+      divisor = Int32.(+)(divisor, 1l)
+    }
+    count = Int32.(+)(count, isPrime)
+    candidate = Int32.(+)(candidate, 1l)
+  }
+  count
+}
+
+provide let primes = (limit: Number) => {
+  Int32.toNumber(primesInt32(Int32.fromNumber(limit)))
+}
+
+let mandelbrotInt32 = (width: Int32, height: Int32, maxIterations: Int32) => {
+  let stepX = Float64.(/)(3.0d, Float64.fromNumber(Int32.toNumber(width)))
+  let stepY = Float64.(/)(3.0d, Float64.fromNumber(Int32.toNumber(height)))
+  let mut checksum = 0l
+  let mut y = 0l
+
+  while (Int32.(<)(y, height)) {
+    let ci = Float64.(+)(
+      -1.5d,
+      Float64.(*)(Float64.(+)(Float64.fromNumber(Int32.toNumber(y)), 0.5d), stepY),
+    )
+    let mut x = 0l
+    while (Int32.(<)(x, width)) {
+      let cr = Float64.(+)(
+        -2.0d,
+        Float64.(*)(Float64.(+)(Float64.fromNumber(Int32.toNumber(x)), 0.5d), stepX),
+      )
+      let mut zr = 0.0d
+      let mut zi = 0.0d
+      let mut iterations = 0l
+      while (
+        Int32.(<)(iterations, maxIterations) &&
+        Float64.(<=)(
+          Float64.(+)(Float64.(*)(zr, zr), Float64.(*)(zi, zi)),
+          4.0d,
+        )
+      ) {
+        let nextZr = Float64.(+)(
+          Float64.(-)(Float64.(*)(zr, zr), Float64.(*)(zi, zi)),
+          cr,
+        )
+        zi = Float64.(+)(Float64.(*)(Float64.(*)(2.0d, zr), zi), ci)
+        zr = nextZr
+        iterations = Int32.(+)(iterations, 1l)
+      }
+      checksum = Int32.(+)(checksum, iterations)
+      x = Int32.(+)(x, 1l)
+    }
+    y = Int32.(+)(y, 1l)
+  }
+  checksum
+}
+
+provide let mandelbrot = (width: Number, height: Number, maxIterations: Number) => {
+  Int32.toNumber(
+    mandelbrotInt32(
+      Int32.fromNumber(width),
+      Int32.fromNumber(height),
+      Int32.fromNumber(maxIterations),
+    ),
+  )
+}
