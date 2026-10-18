@@ -1,0 +1,17 @@
+{
+  "styleReference": "public/images/journal/brook-machine.webp",
+  "entries": [
+    {
+      "slug": "betting-on-lists",
+      "output": "public/images/articles/betting-on-lists-journal.webp",
+      "alt": "A branching brass specimen stand holds four wooden seed trays beneath a magnifying lens, with a fifth tray detached beside it.",
+      "prompt": "Create a brand-new 1536 x 1024 landscape hero illustration for Still Brook field journal, matching the previously viewed brook-machine style reference: fine copperplate engraving, delicate dark-ink crosshatching, muted aged brass, terracotta, olive and cream details. Subject: a small antique naturalist's specimen stand made of branching brass supports, holding four shallow wooden trays filled with neatly packed rows of olive and terracotta seeds. The supports fork from one low central base, holding the trays like a balanced tree. A fifth small tray rests beside the stand, with a simple detachable brass mounting clasp visible, suggesting that one portion can be added or removed while the others stay intact. A small magnifying lens on a short arm hovers over one dense row of seeds. This is a tactile metaphor for a sequence built from dense leaves joined by a branching structure, with efficient edits and close sequential inspection. Keep it a believable quiet workshop object, not a computer diagram. Sparse composition, full stand, trays, lens and base entirely visible in the central 75% of the canvas, generous empty margins on every side. True transparent background, including gaps between the brass arms; no paper rectangle, no background wash, no landscape. No words, letters, numbers, labels, arrows, logos, frame, watermark, neon or photorealism. Use genuine alpha transparency.",
+      "source": "/home/jacobt/.codex/generated_images/01a14c5a-0069-7b13-93e3-4615068e1a63/exec-321ca4af-e56a-4d17-8490-348c8fc6240d.png",
+      "generated": "GPT Image",
+      "transparent_background": true,
+      "width": 1536,
+      "height": 1024,
+      "webpQuality": 82
+    }
+  ]
+}

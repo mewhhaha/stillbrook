@@ -1,0 +1,17 @@
+{
+  "styleReference": "public/images/journal/brook-machine.webp",
+  "entries": [
+    {
+      "slug": "the-game-has-to-look-worth-playing",
+      "output": "public/images/articles/the-game-has-to-look-worth-playing-journal.webp",
+      "alt": "A hand adjusts a brass spotlight over a miniature lighthouse and sailboat, with a second lamp and a small paint box nearby.",
+      "prompt": "Create a new 1536 x 1024 landscape article hero for Still Brook field journal. Fine copperplate engraving and delicate hand-drawn dark-ink crosshatching matching the previously viewed brook-machine style reference, with restrained aged brass, muted terracotta and olive accents. Scene: a tiny theatrical coastal diorama on a shallow oval wooden plinth, with a small terracotta lighthouse, a little wooden boat, and carefully sculpted olive waves. Two freestanding antique brass spotlights illuminate the miniature scene. A human hand reaches from the right to adjust the plain round knob on one spotlight, deliberately directing the light toward the boat. The hand and all fingers are fully visible, naturally cropped only at the wrist. A small closed paint box with three visible color pans rests near the plinth. The mood is a thoughtful craftsperson giving a little game world its visual character. Keep every lamp, the complete plinth, boat and lighthouse visible with generous margins. Sparse, quiet composition in central 75% of canvas. Genuine alpha-transparent background including gaps between objects. No paper rectangle, landscape behind the objects, background wash, halo or colored glow. Light should be shown by highlights on the small objects, not a beam filling the background. No text, letters, numbers, labels, logos, arrows, interface, frame, watermark, neon, 3D rendering or photorealism.",
+      "source": "/home/jacobt/.codex/generated_images/01a14c5a-0069-7b13-93e3-4615068e1a63/exec-f31e3578-a7e2-46dc-b00a-86416bf20af8.png",
+      "generated": "GPT Image",
+      "transparent_background": true,
+      "width": 1536,
+      "height": 1024,
+      "webpQuality": 82
+    }
+  ]
+}

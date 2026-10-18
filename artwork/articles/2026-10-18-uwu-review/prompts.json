@@ -1,0 +1,17 @@
+{
+  "styleReference": "public/images/journal/brook-machine.webp",
+  "entries": [
+    {
+      "slug": "make-the-code-a-little-uwu",
+      "output": "public/images/articles/make-the-code-a-little-uwu-journal.webp",
+      "alt": "A tabby kitten with a terracotta ribbon inspects a brass gear through a magnifying lens beside a watchmaker's bench.",
+      "prompt": "Create a new 1536 x 1024 landscape article hero for Still Brook field journal. Match the previously viewed brook-machine reference in fine copperplate engraving and delicate hand-drawn dark-ink crosshatching, with restrained aged brass, terracotta and olive accents. Scene: a small curious tabby kitten wearing a tiny muted terracotta ribbon sits beside a compact wooden watchmaker's workbench. It peers through a large antique brass magnifying lens on a jointed stand at a brass gear lying flat on the bench. One gear tooth has a small visible fracture. Two spare cogs and a simple small hand file lie nearby. The kitten is quietly cute, with natural feline proportions, and the workshop objects remain precise and readable. The joke is a very cute inspector taking a mechanical defect seriously. No text or anthropomorphic speech. Full kitten including tail and paws, full table and lens inside central 75% of composition with generous empty margins. Genuine transparent background, also through gaps; no paper rectangle, background wash, halo, landscape, colored glow or cast backdrop. No words, letters, numbers, labels, logos, frame, watermark, neon, 3D rendering or photorealism. No interface or code diagram. Keep the sparse engraving readable on both cream and dark paper.",
+      "source": "/home/jacobt/.codex/generated_images/01a14c5a-0069-7b13-93e3-4615068e1a63/exec-324805bc-b3ef-4dfb-b403-8ac4d0c59155.png",
+      "generated": "GPT Image",
+      "transparent_background": true,
+      "width": 1536,
+      "height": 1024,
+      "webpQuality": 82
+    }
+  ]
+}
