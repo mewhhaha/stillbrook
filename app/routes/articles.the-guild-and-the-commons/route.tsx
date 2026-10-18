@@ -9,13 +9,9 @@ export const article = {
   author: "Mira Voss",
   tags: ["software", "craft"],
   image: {
-    src: "/images/articles/the-guild-and-the-commons.jpg",
-    alt: "Workers, rulers, and an entire city surround the immense unfinished Tower of Babel in Pieter Bruegel the Elder's 1563 painting.",
-    credit: {
-      author: "Pieter Bruegel the Elder",
-      license: "Public domain",
-      href: "https://commons.wikimedia.org/wiki/File:Pieter_Bruegel_the_Elder_-_The_Tower_of_Babel_(Vienna)_-_Google_Art_Project.jpg",
-    },
+    src: "/images/articles/the-guild-and-the-commons-journal.webp",
+    alt: "A guarded craft workshop and an open teaching courtyard share a central well.",
+    generated: "GPT Image",
   },
 } as const satisfies ArticleMeta;
 

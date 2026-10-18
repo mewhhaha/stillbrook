@@ -16,13 +16,9 @@ export const article = {
   author: "Elias North",
   tags: ["software", "web"],
   image: {
-    src: "/images/articles/the-branch-predictor-cannot-force-your-thunk.jpg",
-    alt: "Aerial photograph of a classification yard where dozens of rail tracks fan out from a single hump before converging again.",
-    credit: {
-      author: "Carsten Steger",
-      license: "CC BY-SA 4.0",
-      href: "https://commons.wikimedia.org/wiki/File:Aerial_image_of_the_Kornwestheim_classification_yard_(view_from_the_south).jpg",
-    },
+    src: "/images/articles/the-branch-predictor-cannot-force-your-thunk-journal.webp",
+    alt: "A worker untangles strings above a wooden puppet, with a two-way lever nearby.",
+    generated: "GPT Image",
   },
 } as const satisfies ArticleMeta;
 

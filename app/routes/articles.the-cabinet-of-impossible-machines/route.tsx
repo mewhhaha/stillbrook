@@ -10,13 +10,9 @@ export const article = {
   author: "Still Brook",
   tags: ["software"],
   image: {
-    src: "/images/articles/the-cabinet-of-impossible-machines.jpg",
-    alt: "A trompe-l'oeil painting of a display cabinet with open glass doors, its shelves crowded with curiosities, prints, and instruments.",
-    credit: {
-      author: "Domenico Remps",
-      license: "Public domain",
-      href: "https://commons.wikimedia.org/wiki/File:Domenico_Remps_-_Cabinet_of_Curiosities.jpg",
-    },
+    src: "/images/articles/the-cabinet-of-impossible-machines-journal.webp",
+    alt: "Five open compartments contain wheels, a bead sieve, a bowl of stones, a paper-tape machine, and a stone staircase.",
+    generated: "GPT Image",
   },
 } as const satisfies ArticleMeta;
 

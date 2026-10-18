@@ -9,13 +9,9 @@ export const article = {
   author: "Still Brook",
   tags: ["craft"],
   image: {
-    src: "https://upload.wikimedia.org/wikipedia/commons/6/6d/Stopwatch.jpg",
-    alt: "A silver digital stopwatch stands on a wooden surface, with three small buttons beneath its circular display.",
-    credit: {
-      author: "Srini297",
-      license: "CC BY-SA 4.0",
-      href: "https://commons.wikimedia.org/wiki/File:Stopwatch.jpg",
-    },
+    src: "/images/articles/the-menu-owns-the-clock-journal.webp",
+    alt: "A fighter selects a carved weapon wheel while a charging beast hangs in slowed time.",
+    generated: "GPT Image",
   },
 } as const satisfies ArticleMeta;
 

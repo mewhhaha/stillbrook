@@ -16,13 +16,9 @@ export const article = {
   author: "Mira Voss",
   tags: ["software"],
   image: {
-    src: "/images/articles/conservative-to-the-token.jpg",
-    alt: "A tool board in a ship's engine room where each wrench, socket and screwdriver hangs inside a painted outline, and roughly a third of the outlines are empty.",
-    credit: {
-      author: "Maxschiraldi",
-      license: "CC BY-SA 4.0",
-      href: "https://commons.wikimedia.org/wiki/File:Shadowboard-mmschiraldi.jpg",
-    },
+    src: "/images/articles/conservative-to-the-token-journal.webp",
+    alt: "A narrow doorway frames one notebook while a large archive of tools fills the room beyond.",
+    generated: "GPT Image",
   },
 } as const satisfies ArticleMeta;
 

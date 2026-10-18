@@ -9,13 +9,9 @@ export const article = {
   author: "Elias North",
   tags: ["software", "web"],
   image: {
-    src: "/images/articles/a-compiler-in-two-dispatches.jpg",
-    alt: "The exposed mechanism of a Linotype machine that sorts letter moulds back into their bins.",
-    credit: {
-      author: "Richard Ash",
-      license: "CC BY-SA 2.0",
-      href: "https://commons.wikimedia.org/wiki/File:Linotype_typesetting_machine_(45618071855).jpg",
-    },
+    src: "/images/articles/a-compiler-in-two-dispatches-journal.webp",
+    alt: "A comb sorts punched marks into a small folded mechanism checked against a glass plate.",
+    generated: "GPT Image",
   },
 } as const satisfies ArticleMeta;
 

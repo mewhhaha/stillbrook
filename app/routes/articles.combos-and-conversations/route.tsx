@@ -15,13 +15,9 @@ export const article = {
   author: "Still Brook",
   tags: ["craft"],
   image: {
-    src: "/images/articles/combos-and-conversations.jpg",
-    alt: "Charlie Parker and Red Rodney sit talking in a booth at the Downbeat club while Dizzy Gillespie's group plays in the mirror behind them.",
-    credit: {
-      author: "William P. Gottlieb",
-      license: "Public domain",
-      href: "https://commons.wikimedia.org/wiki/File:Charlie_Parker,_Red_Rodney,_Dizzy_Gillespie,_Margie_Hyams,_and_Chuck_Wayne,_Downbeat,_New_York,_N.Y.,_ca._1947_(William_P._Gottlieb_06861).jpg",
-    },
+    src: "/images/articles/combos-and-conversations-journal.webp",
+    alt: "A released spring sends a ball to a bell, whose vibration makes a wooden figure turn.",
+    generated: "GPT Image",
   },
 } as const satisfies ArticleMeta;
 

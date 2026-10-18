@@ -9,13 +9,9 @@ export const article = {
   author: "Mira Voss",
   tags: ["craft"],
   image: {
-    src: "/images/articles/the-ai-sheen.jpg",
-    alt: "Dutch still-life painting of a banquet table with a ham, gleaming silver pitcher, pewter plates, glassware, and a rumpled white cloth.",
-    credit: {
-      author: "Willem Claesz Heda",
-      license: "Public domain",
-      href: "https://commons.wikimedia.org/wiki/File:Willem_Claesz_Heda_-_Banquet_Piece_with_Ham_-_Google_Art_Project.jpg",
-    },
+    src: "/images/articles/the-ai-sheen-journal.webp",
+    alt: "A glazed portrait bust has a rough painted patch on its cheek, beside a mirror and brushes.",
+    generated: "GPT Image",
   },
 } as const satisfies ArticleMeta;
 

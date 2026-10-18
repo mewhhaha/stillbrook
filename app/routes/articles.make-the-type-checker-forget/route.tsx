@@ -17,13 +17,9 @@ export const article = {
   author: "Mira Voss",
   tags: ["software"],
   image: {
-    src: "https://upload.wikimedia.org/wikipedia/commons/e/e1/Telephone_switchboard_operators%2C_ca_1922_%28MOHAI_5108%29.jpg",
-    alt: "A telephone operator sits at a large switchboard, connecting individual lines with patch cords in Seattle around 1922.",
-    credit: {
-      author: "Webster & Stevens",
-      license: "Public domain",
-      href: "https://commons.wikimedia.org/wiki/File:Telephone_switchboard_operators,_ca_1922_(MOHAI_5108).jpg",
-    },
+    src: "/images/articles/make-the-type-checker-forget-journal.webp",
+    alt: "Open specimen drawers and a magnifying glass sit beside a closed wooden box and a single token.",
+    generated: "GPT Image",
   },
 } as const satisfies ArticleMeta;
 

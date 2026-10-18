@@ -9,13 +9,9 @@ export const article = {
   author: "Mira Voss",
   tags: ["software", "security"],
   image: {
-    src: "/images/articles/packages-should-arrive-inert.jpg",
-    alt: "A person leans into a camera on a tripod while inspecting a distant scene.",
-    credit: {
-      author: "Lav Varshney",
-      license: "CC0",
-      href: "https://scikit-image.org/docs/stable/api/skimage.data.html#skimage.data.camera",
-    },
+    src: "/images/articles/packages-should-arrive-inert-journal.webp",
+    alt: "An open shipping crate holds a dormant clockwork insect and loose parts beside a separate winding key.",
+    generated: "GPT Image",
   },
 } as const satisfies ArticleMeta;
 

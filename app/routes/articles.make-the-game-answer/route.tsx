@@ -17,13 +17,9 @@ export const article = {
   author: "Still Brook",
   tags: ["craft"],
   image: {
-    src: "/images/articles/make-the-game-answer.jpg",
-    alt: "A Newton's cradle photographed in black and white with both end balls swung outward mid-exchange.",
-    credit: {
-      author: "Sheila Sund",
-      license: "CC BY 2.0",
-      href: "https://commons.wikimedia.org/wiki/File:Newton%27s_Cradle_(15221366308).jpg",
-    },
+    src: "/images/articles/make-the-game-answer-journal.webp",
+    alt: "A closed fuse switch lights a radio, raises a shutter, and makes a mechanic turn.",
+    generated: "GPT Image",
   },
 } as const satisfies ArticleMeta;
 

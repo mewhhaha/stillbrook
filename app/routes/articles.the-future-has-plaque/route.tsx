@@ -9,13 +9,9 @@ export const article = {
   author: "Still Brook",
   tags: ["craft"],
   image: {
-    src: "/images/articles/the-future-has-plaque.jpg",
-    alt: "Extreme close-up of the curved nylon bristles of a toothbrush head.",
-    credit: {
-      author: "J1958gonzalez",
-      license: "CC BY-SA 4.0",
-      href: "https://commons.wikimedia.org/wiki/File:Patented_curved_bristles_of_the_Collis_Curve_toothbrush.jpg",
-    },
+    src: "/images/articles/the-future-has-plaque-journal.webp",
+    alt: "A wooden toothbrush, porcelain tooth model, and floss spool sit before a closed brass capsule.",
+    generated: "GPT Image",
   },
 } as const satisfies ArticleMeta;
 

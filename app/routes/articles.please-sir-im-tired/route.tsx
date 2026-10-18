@@ -9,13 +9,9 @@ export const article = {
   author: "Still Brook",
   tags: ["software", "craft"],
   image: {
-    src: "/images/articles/please-sir-im-tired.jpg",
-    alt: "A finger presses the black reset button on a gray hydrogen-inflation safety-system control panel.",
-    credit: {
-      author: "Famartin",
-      license: "CC BY-SA 4.0",
-      href: "https://commons.wikimedia.org/wiki/File:2017-10-05_06_47_32_%22Reset%22_button_being_pressed_on_the_Hydrogen_Inflation_Safety_System_panel_at_the_National_Weather_Service%27s_Baltimore-Washington_Weather_Forecast_Office_in_the_Dulles_section_of_Sterling,_Loudoun_County,_Virginia.jpg",
-    },
+    src: "/images/articles/please-sir-im-tired-journal.webp",
+    alt: "A tired attendant faces a brass button amid empty jars and a ring of wax seals.",
+    generated: "GPT Image",
   },
 } as const satisfies ArticleMeta;
 

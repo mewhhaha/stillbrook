@@ -16,13 +16,9 @@ export const article = {
   author: "Elias North",
   tags: ["software"],
   image: {
-    src: "/images/articles/the-round-trip-test.jpg",
-    alt: "A steam locomotive sits on a railway turntable in Papar, Sabah, ready to be turned around and sent back the way it came.",
-    credit: {
-      author: "Cccefalon",
-      license: "CC BY-SA 3.0",
-      href: "https://commons.wikimedia.org/wiki/File:Papar_Sabah_Heritage-Steam-Train-Turntable-01.jpg",
-    },
+    src: "/images/articles/the-round-trip-test-journal.webp",
+    alt: "Loose clock parts surround a brass movement on a workbench between two clocks connected by a wire.",
+    generated: "GPT Image",
   },
 } as const satisfies ArticleMeta;
 

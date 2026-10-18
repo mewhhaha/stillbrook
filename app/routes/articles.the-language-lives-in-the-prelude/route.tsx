@@ -16,13 +16,9 @@ export const article = {
   author: "Elias North",
   tags: ["software"],
   image: {
-    src: "/images/articles/the-language-lives-in-the-prelude.jpg",
-    alt: "A wooden letterpress type case holds rows of individual metal letters in small compartments.",
-    credit: {
-      author: "Michellecornelison",
-      license: "CC BY-SA 4.0",
-      href: "https://commons.wikimedia.org/wiki/File:Letterpress_type_case.jpg",
-    },
+    src: "/images/articles/the-language-lives-in-the-prelude-journal.webp",
+    alt: "An unfinished wooden puppet theatre sits among tools, fabric, and carved stage pieces.",
+    generated: "GPT Image",
   },
 } as const satisfies ArticleMeta;
 

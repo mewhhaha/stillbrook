@@ -8,6 +8,11 @@ export const article = {
   published: "2026-07-13T09:46:00Z",
   author: "Elias North",
   tags: ["software"],
+  image: {
+    src: "/images/articles/the-function-with-a-backpack-journal.webp",
+    alt: "A brass automaton carries two shared thread spools in a small canvas pack.",
+    generated: "GPT Image",
+  },
 } as const satisfies ArticleMeta;
 
 export function meta() {

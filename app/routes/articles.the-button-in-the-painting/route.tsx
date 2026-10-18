@@ -11,13 +11,9 @@ export const article = {
   author: "Mira Voss",
   tags: ["software", "web"],
   image: {
-    src: "/images/articles/the-button-in-the-painting.jpg",
-    alt: "A seventeenth-century trompe-l'oeil painting of combs, scissors, letters, and books tucked behind red leather straps on a dark board.",
-    credit: {
-      author: "Samuel van Hoogstraten",
-      license: "Public domain",
-      href: "https://commons.wikimedia.org/wiki/File:Tromp-l%27oeil_Still-Life_1664_Hoogstraeten.jpg",
-    },
+    src: "/images/articles/the-button-in-the-painting-journal.webp",
+    alt: "A hand reaches through a brass-framed door in a painting to press a small wall button.",
+    generated: "GPT Image",
   },
 } as const satisfies ArticleMeta;
 

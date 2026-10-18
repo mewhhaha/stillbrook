@@ -17,13 +17,9 @@ export const article = {
   author: "Mira Voss",
   tags: ["software"],
   image: {
-    src: "https://upload.wikimedia.org/wikipedia/commons/0/09/Jacquard.loom.cards.jpg",
-    alt: "A close-up of punched cards threaded together for a Jacquard loom.",
-    credit: {
-      author: "George H. Williams",
-      license: "Public domain",
-      href: "https://commons.wikimedia.org/wiki/File:Jacquard.loom.cards.jpg",
-    },
+    src: "/images/articles/the-type-checker-gets-a-second-context-journal.webp",
+    alt: "Overlapping architectural tracings cover a carved stone beside chisels, a mallet, and a completed stone arch.",
+    generated: "GPT Image",
   },
 } as const satisfies ArticleMeta;
 

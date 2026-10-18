@@ -9,13 +9,9 @@ export const article = {
   author: "Mira Voss",
   tags: ["craft"],
   image: {
-    src: "/images/articles/the-forty-second-first-draft.jpg",
-    alt: "Close-up of the round black keys of a vintage Continental Standard typewriter keyboard.",
-    credit: {
-      author: "Sommeregger",
-      license: "CC BY-SA 3.0",
-      href: "https://commons.wikimedia.org/wiki/File:Continental_Standard_typewriter_keyboard.jpg",
-    },
+    src: "/images/articles/the-forty-second-first-draft-journal.webp",
+    alt: "A cinema projector casts a strange procession above an open battered notebook.",
+    generated: "GPT Image",
   },
 } as const satisfies ArticleMeta;
 

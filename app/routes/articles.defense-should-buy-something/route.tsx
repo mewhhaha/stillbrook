@@ -9,13 +9,9 @@ export const article = {
   author: "Still Brook",
   tags: ["craft"],
   image: {
-    src: "https://upload.wikimedia.org/wikipedia/commons/2/28/Jacques_Callot%2C_Duel_with_Swords_and_Daggers%2C_c._1617%2C_NGA_36565.jpg",
-    alt: "Jacques Callot's small etching shows two duelists meeting crossed blades, each holding a sword and dagger as they lean into the exchange.",
-    credit: {
-      author: "Jacques Callot",
-      license: "CC0 1.0",
-      href: "https://commons.wikimedia.org/wiki/File:Jacques_Callot,_Duel_with_Swords_and_Daggers,_c._1617,_NGA_36565.jpg",
-    },
+    src: "/images/articles/defense-should-buy-something-journal.webp",
+    alt: "A buckler turns aside a blade and opens a clear step toward the opponent.",
+    generated: "GPT Image",
   },
 } as const satisfies ArticleMeta;
 

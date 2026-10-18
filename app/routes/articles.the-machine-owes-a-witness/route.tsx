@@ -9,13 +9,9 @@ export const article = {
   author: "Mira Voss",
   tags: ["software", "craft"],
   image: {
-    src: "/images/articles/the-machine-owes-a-witness.jpg",
-    alt: "A metal proof press with a wide flat bed and large roller stands in a print workshop.",
-    credit: {
-      author: "Kathleenberry",
-      license: "CC BY-SA 4.0",
-      href: "https://commons.wikimedia.org/wiki/File:Proof_press.jpg",
-    },
+    src: "/images/articles/the-machine-owes-a-witness-journal.webp",
+    alt: "A naturalist weighs a claim against a transparent case containing its evidence.",
+    generated: "GPT Image",
   },
 } as const satisfies ArticleMeta;
 

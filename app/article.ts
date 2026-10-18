@@ -1,16 +1,27 @@
-export type ArticleImage = {
+type ArticleImageSource = {
   /** Path under public/, for example "/images/articles/first-light.jpg". */
   src: string;
   alt: string;
-  credit: {
-    /** The photographer or artist as they ask to be named. */
-    author: string;
-    /** Short license name, for example "CC BY-SA 4.0" or "Public domain". */
-    license: string;
-    /** The source page where the license is stated. */
-    href: string;
-  };
 };
+
+export type ArticleImage = ArticleImageSource & (
+  | {
+      /** The image generator used to make this illustration. */
+      generated: string;
+      credit?: never;
+    }
+  | {
+      generated?: never;
+      credit: {
+        /** The photographer or artist as they ask to be named. */
+        author: string;
+        /** Short license name, for example "CC BY-SA 4.0" or "Public domain". */
+        license: string;
+        /** The source page where the license is stated. */
+        href: string;
+      };
+    }
+);
 
 export type ArticleMeta = {
   title: string;
@@ -18,7 +29,7 @@ export type ArticleMeta = {
   published: `${number}-${number}-${number}T${number}:${number}:${number}Z`;
   author: string;
   tags: readonly string[];
-  /** A freely licensed image associated with the article, shown as its hero. */
+  /** The article hero, with its source credit or generation attribution. */
   image?: ArticleImage;
 };
 

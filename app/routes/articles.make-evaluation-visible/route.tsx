@@ -9,13 +9,9 @@ export const article = {
   author: "Still Brook",
   tags: ["software"],
   image: {
-    src: "/images/articles/make-evaluation-visible.jpg",
-    alt: "Close-up of an antique steel-tube steam pressure gauge by Tinker, Shenton & Co. of Hyde, its needle pointing to 60 lb per square inch with a red maximum mark at 100.",
-    credit: {
-      author: "Clem Rutter, Rochester, Kent.",
-      license: "CC BY 3.0",
-      href: "https://commons.wikimedia.org/wiki/File:Queen_Street_Mill_-_Lancashire_Boilers_Steam_pressure_gauge_5453.JPG",
-    },
+    src: "/images/articles/make-evaluation-visible-journal.webp",
+    alt: "A glass water clock pours into a bowl beside a sand pile, weights, and calipers.",
+    generated: "GPT Image",
   },
 } as const satisfies ArticleMeta;
 

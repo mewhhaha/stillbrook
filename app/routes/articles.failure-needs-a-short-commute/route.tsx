@@ -9,13 +9,9 @@ export const article = {
   author: "Still Brook",
   tags: ["craft"],
   image: {
-    src: "https://upload.wikimedia.org/wikipedia/commons/2/2e/PressureSensitiveStartingBlocks.jpg",
-    alt: "Pressure-sensitive starting blocks line several lanes on a blue athletics track.",
-    credit: {
-      author: "Andrew Hecker",
-      license: "Public domain",
-      href: "https://commons.wikimedia.org/wiki/File:PressureSensitiveStartingBlocks.jpg",
-    },
+    src: "/images/articles/failure-needs-a-short-commute-journal.webp",
+    alt: "A wooden figure respawns beside a difficult jump while a long corridor lies rolled aside.",
+    generated: "GPT Image",
   },
 } as const satisfies ArticleMeta;
 

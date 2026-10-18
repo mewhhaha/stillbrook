@@ -15,13 +15,9 @@ export const article = {
   author: "Mira Voss",
   tags: ["software", "web"],
   image: {
-    src: "/images/articles/the-document-needs-a-sandbox.jpg",
-    alt: "A researcher in safety glasses examines a small sample held in tweezers through the sealed glove ports of a laboratory glovebox.",
-    credit: {
-      author: "UCL Mathematical & Physical Sciences",
-      license: "CC BY 2.0",
-      href: "https://commons.wikimedia.org/wiki/File:Glovebox_(9360191038).jpg",
-    },
+    src: "/images/articles/the-document-needs-a-sandbox-journal.webp",
+    alt: "A folded paper building reveals a complex mechanism beneath a glass bell jar.",
+    generated: "GPT Image",
   },
 } as const satisfies ArticleMeta;
 

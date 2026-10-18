@@ -9,13 +9,9 @@ export const article = {
   author: "Mira Voss",
   tags: ["software", "web"],
   image: {
-    src: "/images/articles/the-runtime-surplus.jpg",
-    alt: "The engine room of the steamship Virginia V, with a red-painted steam engine, a black handwheel, and a wooden panel of brass gauges.",
-    credit: {
-      author: "Joe Mabel",
-      license: "CC BY-SA 4.0",
-      href: "https://commons.wikimedia.org/wiki/File:Virginia_V_(ship,_1922)_engine_room_01.jpg",
-    },
+    src: "/images/articles/the-runtime-surplus-journal.webp",
+    alt: "A traveler faces a shed crowded with engines beside a greenhouse and a water wheel.",
+    generated: "GPT Image",
   },
 } as const satisfies ArticleMeta;
 

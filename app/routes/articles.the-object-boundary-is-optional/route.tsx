@@ -9,13 +9,9 @@ export const article = {
   author: "Mira Voss",
   tags: ["software"],
   image: {
-    src: "https://upload.wikimedia.org/wikipedia/commons/9/97/Bletchley_Park_1945_photo_of_punched_card_machines.jpg",
-    alt: "Rows of punched-card processing machines fill a work room at Bletchley Park in 1945.",
-    credit: {
-      author: "UK Government",
-      license: "Public domain",
-      href: "https://commons.wikimedia.org/wiki/File:Bletchley_Park_1945_photo_of_punched_card_machines.jpg",
-    },
+    src: "/images/articles/the-object-boundary-is-optional-journal.webp",
+    alt: "A gardener carries related plants in separate trays beside a heavy crate.",
+    generated: "GPT Image",
   },
 } as const satisfies ArticleMeta;
 

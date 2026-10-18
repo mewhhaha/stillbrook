@@ -9,13 +9,9 @@ export const article = {
   author: "Mira Voss",
   tags: ["software"],
   image: {
-    src: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Library_bookshelf.jpg/1280px-Library_bookshelf.jpg",
-    alt: "Rows of library books sit on low wooden shelves, each volume carrying its own spine label while more books are displayed on top.",
-    credit: {
-      author: "Mshuang2",
-      license: "CC0 1.0",
-      href: "https://commons.wikimedia.org/wiki/File:Library_bookshelf.jpg",
-    },
+    src: "/images/articles/the-include-you-never-wrote-journal.webp",
+    alt: "A hand fits a wooden wedge between two stools on a cluttered workbench.",
+    generated: "GPT Image",
   },
 } as const satisfies ArticleMeta;
 

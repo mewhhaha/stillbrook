@@ -9,13 +9,9 @@ export const article = {
   author: "Elias North",
   tags: ["software"],
   image: {
-    src: "/images/articles/witness-me.jpg",
-    alt: "Charles Lindbergh sits on a raised witness chair in a crowded 1935 courtroom while lawyers and court officials listen around a table below.",
-    credit: {
-      author: "World Telegram staff photographer",
-      license: "Public domain",
-      href: "https://commons.wikimedia.org/wiki/File:Charles_Lindbergh_testifying.jpg",
-    },
+    src: "/images/articles/witness-me-journal.webp",
+    alt: "A hand unlocks a specimen drawer beside glass tubes of leaves, feathers, flowers, and differently shaped brass keys.",
+    generated: "GPT Image",
   },
 } as const satisfies ArticleMeta;
 

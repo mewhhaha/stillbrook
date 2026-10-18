@@ -100,6 +100,12 @@
   --font-display: "Lora", Georgia, serif;
   --font-mono: ui-monospace, "SFMono-Regular", Consolas, monospace;
 }
+@theme inline {
+  --color-paper: var(--journal-paper);
+  --color-ink: var(--journal-ink);
+  --color-muted: var(--journal-muted);
+  --color-accent: var(--journal-accent);
+}
 /* Dark mode: an explicit data-theme cookie override wins; otherwise follow the system preference. */
 @custom-variant dark {
   &:where([data-theme="dark"], [data-theme="dark"] *) { @slot; }
@@ -107,16 +113,87 @@
     &:where(:root:not([data-theme="light"]), :root:not([data-theme="light"]) *) { @slot; }
   }
 }
+:root {
+  --journal-paper: #f3f0e6;
+  --journal-ink: #302c25;
+  --journal-muted: #6a655b;
+  --journal-accent: #9c4026;
+  @variant dark {
+    --journal-paper: #24221e;
+    --journal-ink: #eee9df;
+    --journal-muted: #b9b2a5;
+    --journal-accent: #e4a080;
+  }
+}
+@utility journal-container {
+  margin-inline: auto;
+  max-width: 78.5rem;
+  padding-inline: --spacing(6);
+  @media (min-width: 48rem) { padding-inline: --spacing(8); }
+  @media (min-width: 64rem) { padding-inline: --spacing(12); }
+}
+@utility journal-masthead {
+  padding-block: --spacing(6) --spacing(5);
+  font-family: var(--font-display);
+  font-size: clamp(3.2rem, 18vw, 7rem);
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: -0.075em;
+  @media (min-width: 48rem) { font-size: clamp(5rem, 16vw, 14rem); }
+}
+@utility journal-kicker {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  line-height: 1.6;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+@utility journal-link {
+  display: inline-flex;
+  align-items: center;
+  gap: --spacing(6);
+  color: var(--journal-accent);
+  font-size: 1rem;
+  padding-bottom: 2px;
+  border-bottom: 1px solid color-mix(in srgb, var(--journal-accent) 35%, transparent);
+  @variant hover { border-bottom-color: currentColor; }
+  @media (min-width: 40rem) { font-size: 0.875rem; }
+}
+@utility journal-icon-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: --spacing(12);
+  height: --spacing(12);
+  border-radius: 50%;
+  color: var(--journal-muted);
+  cursor: pointer;
+  @variant hover { color: var(--journal-accent); }
+  &[aria-pressed="true"] { color: var(--journal-accent); }
+  @media (pointer: fine) { width: --spacing(9); height: --spacing(9); }
+}
+@utility journal-topic {
+  padding-block: --spacing(3);
+  white-space: nowrap;
+  border-bottom: 2px solid transparent;
+  &[aria-current="page"] { color: var(--journal-accent); border-bottom-color: currentColor; }
+}
+@utility journal-specimen {
+  mask-image: linear-gradient(to right, transparent, #000 5%, #000 95%, transparent), linear-gradient(to bottom, transparent, #000 5%, #000 95%, transparent);
+  mask-composite: intersect;
+}
+.journal-menu summary::-webkit-details-marker { display: none; }
 @utility prose {
-  color: var(--color-zinc-700); font-size: var(--text-base); line-height: --spacing(7);
+  color: var(--journal-ink); font-size: var(--text-base); line-height: --spacing(7);
   & > * + * { margin-top: --spacing(6); }
-  & h1, & h2, & h3, & h4, & h5, & h6 { color: var(--color-zinc-950); font-family: var(--font-display); font-weight: var(--font-weight-medium); }
+  & h1, & h2, & h3, & h4, & h5, & h6 { color: var(--journal-ink); font-family: var(--font-display); font-weight: 400; }
   & h1 { font-size: var(--text-4xl); letter-spacing: var(--tracking-tight); }
   & h2 { margin-top: --spacing(12); font-size: var(--text-2xl); letter-spacing: var(--tracking-tight); }
   & h3 { margin-top: --spacing(10); font-size: var(--text-xl); }
   & h4, & h5, & h6 { margin-top: --spacing(8); font-size: var(--text-lg); }
   & p { text-wrap: pretty; }
-  & :where(p, li, blockquote, figcaption, td) a { color: var(--color-orange-700); text-decoration-line: underline; text-underline-offset: 4px; @variant hover { color: var(--color-orange-800); } }
+  & :where(p, li, blockquote, figcaption, td) a { color: var(--journal-accent); text-decoration-line: underline; text-underline-offset: 4px; @variant hover { text-decoration-thickness: 2px; } }
   & ul { padding-left: --spacing(6); list-style-type: disc; }
   & ol { padding-left: --spacing(6); list-style-type: decimal; }
   & li + li { margin-top: --spacing(2); }
@@ -128,9 +205,6 @@
   & > pre code { background: transparent; padding: 0; color: inherit; }
   & img { border-radius: min(1vw, 12px); }
   @variant dark {
-    color: var(--color-zinc-300);
-    & h1, & h2, & h3, & h4, & h5, & h6 { color: var(--color-zinc-50); }
-    & :where(p, li, blockquote, figcaption, td) a { color: var(--color-orange-400); @variant hover { color: var(--color-orange-300); } }
     & strong { color: var(--color-zinc-50); }
     & > blockquote { color: var(--color-zinc-200); }
     & :not(pre) > code { background: var(--color-zinc-800); color: var(--color-zinc-200); }
@@ -165,4 +239,9 @@
   font-family: "Lora", Georgia, serif;
 }
 html { color-scheme: light; @variant dark { color-scheme: dark; } }
-body { margin: 0; background: var(--color-white); color: var(--color-zinc-950); @variant dark { background: var(--color-zinc-950); color: var(--color-zinc-100); } }
+body { margin: 0; background: var(--journal-paper); color: var(--journal-ink); }
+::selection { background: color-mix(in srgb, var(--journal-accent) 25%, transparent); }
+:where(a, button, summary):focus-visible { outline: 2px solid var(--journal-accent); outline-offset: 4px; }
+:where(input):focus-visible { outline: 2px solid var(--journal-accent); outline-offset: -1px; }
+:where(a):hover { color: var(--journal-accent); }
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }

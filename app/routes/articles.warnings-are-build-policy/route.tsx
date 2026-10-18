@@ -9,13 +9,9 @@ export const article = {
   author: "Mira Voss",
   tags: ["software"],
   image: {
-    src: "https://upload.wikimedia.org/wikipedia/commons/3/33/Lighting_control_panel.JPG",
-    alt: "An open outdoor-lighting control panel shows breakers, relays, terminal blocks, and neatly routed wiring inside a metal enclosure.",
-    credit: {
-      author: "Dmitry G",
-      license: "CC BY-SA 3.0",
-      href: "https://commons.wikimedia.org/wiki/File:Lighting_control_panel.JPG",
-    },
+    src: "/images/articles/warnings-are-build-policy-journal.webp",
+    alt: "A bird with a clipboard stands beside a red barrier at a workshop lined with brass warning bells.",
+    generated: "GPT Image",
   },
 } as const satisfies ArticleMeta;
 

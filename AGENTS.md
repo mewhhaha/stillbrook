@@ -4,28 +4,23 @@ Read STYLE.md before drafting or editing any article — it defines the voice (i
 
 ## Every new article needs a hero image
 
-A freely licensed image that fits the essay's subject or mood, wired into the article's metadata:
+Use a distinct field-journal illustration that fits the essay's subject: fine copperplate engraving, muted brass, terracotta, and olive, with a transparent background. Use `public/images/journal/brook-machine.webp` as the style reference and the prompt set in `artwork/articles/` for continuity. Generate raster artwork with GPT Image; preserve its alpha channel and check it on both light and dark pages. Do not substitute SVG or a generic reused image.
 
-1. Search Wikimedia Commons:
-   `curl -s "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=<TERMS>&gsrnamespace=6&gsrlimit=10&prop=imageinfo&iiprop=url|extmetadata|size&iiurlwidth=1600"`
-2. Pick a landscape JPEG/PNG photograph or painting (no maps, logos, screenshots, or text-heavy scans) whose `extmetadata.LicenseShortName.value` is Public domain, CC0, CC BY, or CC BY-SA. Never NC, ND, or fair use. NEVER generate an SVG (or any artwork) as the hero — every generated hero shipped so far has been replaced with a found photograph, and `og:image` previews cannot render SVG. If the first search finds nothing fitting, search again with different terms; a real photograph that fits the essay's mood always exists.
-3. Download `imageinfo[0].thumburl` (ask for 1600px; the API usually serves a 1920px rendition — use whatever it returns) to `public/images/articles/<slug>.<ext>` and commit it with the article PR. The `upload-article-images` workflow uploads it to R2 and commits its removal from the PR branch before the PR is squash-merged. Do not use Git LFS.
-4. Check the file is not already used by another article (`md5sum public/images/articles/*` — every hero must be unique).
-5. Add to the article's `article` object, after `tags` (type `ArticleImage` in app/article.ts):
+1. Read the essay and choose a concrete visual metaphor. Keep the scene free of text and leave the complete subject visible.
+2. Save a 1536 × 1024 WebP to `public/images/articles/<slug>-journal.webp`. Inspect the image and write alt text describing what it actually shows.
+3. Add the image after `tags` in the article metadata:
 
    ```ts
    image: {
-     src: "/images/articles/<slug>.<ext>",
-     alt: "<one sentence describing what is in the picture>",
-     credit: {
-       author: "<plain-text artist name, HTML stripped>",
-       license: "<LicenseShortName, e.g. 'CC BY-SA 4.0'>",
-       href: "<imageinfo[0].descriptionurl>",
-     },
+     src: "/images/articles/<slug>-journal.webp",
+     alt: "<one sentence describing the illustration>",
+     generated: "GPT Image",
    },
    ```
 
-The layout renders the hero with its credit automatically and emits it as `og:image`.
+4. Commit the image with the article PR. The `upload-article-images` workflow uploads it to R2 and removes the local file from the PR branch before merging. Do not use Git LFS.
+
+The layout renders the illustration and its generation attribution, and emits it as `og:image`. Existing source photographs remain supported through the `credit` metadata variant; do not attach a photographer's credit or a Creative Commons license to generated artwork.
 
 ## Illustrations
 

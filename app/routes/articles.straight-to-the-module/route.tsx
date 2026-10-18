@@ -9,13 +9,9 @@ export const article = {
   author: "Still Brook",
   tags: ["software", "web"],
   image: {
-    src: "/images/articles/straight-to-the-module.jpg",
-    alt: "A Curta mechanical calculator standing beside its black cylindrical case on a white museum pedestal.",
-    credit: {
-      author: "Don DeBold",
-      license: "CC BY 2.0",
-      href: "https://commons.wikimedia.org/wiki/File:Curta_Mechanical_Calculator_at_CHM_(7995215541).jpg",
-    },
+    src: "/images/articles/straight-to-the-module-journal.webp",
+    alt: "A small brass apparatus sits on a bench in front of a much larger machine covered with cloth.",
+    generated: "GPT Image",
   },
 } as const satisfies ArticleMeta;
 

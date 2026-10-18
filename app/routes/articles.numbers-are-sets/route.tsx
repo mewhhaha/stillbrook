@@ -9,13 +9,9 @@ export const article = {
   author: "Mira Voss",
   tags: ["software"],
   image: {
-    src: "/images/articles/numbers-are-sets.jpg",
-    alt: "Three round metal laboratory sieves with different mesh sizes lie side by side.",
-    credit: {
-      author: "BMK",
-      license: "CC BY-SA 3.0",
-      href: "https://commons.wikimedia.org/wiki/File:Laboratory_sieves_BMK.jpg",
-    },
+    src: "/images/articles/numbers-are-sets-journal.webp",
+    alt: "A wooden gate narrows a trough of iron beads as a counterweight shifts the remaining row.",
+    generated: "GPT Image",
   },
 } as const satisfies ArticleMeta;
 

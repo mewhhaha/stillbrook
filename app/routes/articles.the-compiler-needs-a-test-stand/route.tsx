@@ -9,13 +9,9 @@ export const article = {
   author: "Elias North",
   tags: ["software"],
   image: {
-    src: "/images/articles/the-compiler-needs-a-test-stand.jpg",
-    alt: "An automobile engine is mounted beside measurement equipment on a laboratory test stand.",
-    credit: {
-      author: "Mikelantis",
-      license: "CC BY-SA 3.0",
-      href: "https://commons.wikimedia.org/wiki/File:TitanTestStand_Rev2011.jpg",
-    },
+    src: "/images/articles/the-compiler-needs-a-test-stand-journal.webp",
+    alt: "Five small engines undergo the same bench test, with three showing visible faults.",
+    generated: "GPT Image",
   },
 } as const satisfies ArticleMeta;
 

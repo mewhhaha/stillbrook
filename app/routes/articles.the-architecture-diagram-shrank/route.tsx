@@ -9,13 +9,9 @@ export const article = {
   author: "Mira Voss",
   tags: ["software"],
   image: {
-    src: "/images/articles/the-architecture-diagram-shrank.jpg",
-    alt: "A Victorinox Swiss Army knife with all of its blades and tools folded out from a single red handle.",
-    credit: {
-      author: "Jonas Bergsten",
-      license: "Public domain",
-      href: "https://commons.wikimedia.org/wiki/File:Swiss_army_knife_open_20050612_(cropped).jpg",
-    },
+    src: "/images/articles/the-architecture-diagram-shrank-journal.webp",
+    alt: "A worker opens a compact cabinet full of pipes and tanks beside a sprawling cluster of service buildings.",
+    generated: "GPT Image",
   },
 } as const satisfies ArticleMeta;
 

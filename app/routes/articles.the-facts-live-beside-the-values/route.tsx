@@ -8,6 +8,11 @@ export const article = {
   published: "2026-08-14T18:18:00Z",
   author: "Mira Voss",
   tags: ["software"],
+  image: {
+    src: "/images/articles/the-facts-live-beside-the-values-journal.webp",
+    alt: "A ferryman checks a measuring cord beside a parcel before sending it across a river.",
+    generated: "GPT Image",
+  },
 } as const satisfies ArticleMeta;
 
 export function meta() {

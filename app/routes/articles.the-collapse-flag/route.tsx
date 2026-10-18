@@ -9,13 +9,9 @@ export const article = {
   author: "Elias North",
   tags: ["software"],
   image: {
-    src: "/images/articles/the-collapse-flag.jpg",
-    alt: "A Jacquard loom in a museum, hundreds of warp threads fanning into the machine beside a hanging stack of punched pattern cards.",
-    credit: {
-      author: "Stephencdickson",
-      license: "CC BY-SA 4.0",
-      href: "https://commons.wikimedia.org/wiki/File:A_Jacquard_loom_showing_information_punchcards,_National_Museum_of_Scotland.jpg",
-    },
+    src: "/images/articles/the-collapse-flag-journal.webp",
+    alt: "A loom weaves repeated knot patterns beside a stack of patterned cloth.",
+    generated: "GPT Image",
   },
 } as const satisfies ArticleMeta;
 

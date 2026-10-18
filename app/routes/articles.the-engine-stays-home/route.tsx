@@ -9,13 +9,9 @@ export const article = {
   author: "Mira Voss",
   tags: ["software", "web"],
   image: {
-    src: "/images/articles/the-engine-stays-home.jpg",
-    alt: "A restored green-and-steel horizontal mill engine with a tall flywheel, standing in a museum engine house under a wooden roof.",
-    credit: {
-      author: "Daderot",
-      license: "CC0",
-      href: "https://commons.wikimedia.org/wiki/File:150_HP_horizontal_mill_engine,_Fitchburg_Steam_Engine_Co.,_Fitchburg,_MA,_c._1900_-_Stationary_steam_engine_collection_-_New_England_Wireless_%26_Steam_Museum_-_East_Greenwich,_RI_-_DSC06582.jpg",
-    },
+    src: "/images/articles/the-engine-stays-home-journal.webp",
+    alt: "A compact turbine travels toward a rain cloud while its larger engine stays on the bench.",
+    generated: "GPT Image",
   },
 } as const satisfies ArticleMeta;
 

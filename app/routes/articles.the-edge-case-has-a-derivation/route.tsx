@@ -9,13 +9,9 @@ export const article = {
   author: "Elias North",
   tags: ["software", "craft"],
   image: {
-    src: "/images/articles/the-edge-case-has-a-derivation.jpg",
-    alt: "Two coils of five-hole and eight-hole punched paper tape, one pale yellow and one pink, resting on a white surface.",
-    credit: {
-      author: "TedColes",
-      license: "Public domain",
-      href: "https://commons.wikimedia.org/wiki/File:PaperTapes-5and8Hole.jpg",
-    },
+    src: "/images/articles/the-edge-case-has-a-derivation-journal.webp",
+    alt: "A banana in a hat and an apple in a cat mask pass through brass gears.",
+    generated: "GPT Image",
   },
 } as const satisfies ArticleMeta;
 

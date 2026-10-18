@@ -16,13 +16,9 @@ export const article = {
   author: "Elias North",
   tags: ["software"],
   image: {
-    src: "/images/articles/the-thunk-should-be-the-fallback.jpg",
-    alt: "A yellow pneumatic tube carrier lies on a white surface, sealed at both ends with dark caps.",
-    credit: {
-      author: "The Central Intelligence Agency",
-      license: "Public domain",
-      href: "https://commons.wikimedia.org/wiki/File:Pneumatic_Tube_-_Flickr_-_The_Central_Intelligence_Agency.jpg",
-    },
+    src: "/images/articles/the-thunk-should-be-the-fallback-journal.webp",
+    alt: "A chained brass capsule holds a clockwork animal beside curling paper, a leafy vine, and an accordion-folded strip.",
+    generated: "GPT Image",
   },
 } as const satisfies ArticleMeta;
 

@@ -9,13 +9,9 @@ export const article = {
   author: "Elias North",
   tags: ["software"],
   image: {
-    src: "/images/articles/the-ir-has-a-front-door.jpg",
-    alt: "A green arched ticket window under a TICKETS sign, with a bell on the counter, in the preserved booking office at Horsted Keynes station.",
-    credit: {
-      author: "Colin Smith",
-      license: "CC BY-SA 2.0",
-      href: "https://commons.wikimedia.org/wiki/File:Horsted_Keynes_Station_-_Ticket_Window_-_geograph.org.uk_-_6605574.jpg",
-    },
+    src: "/images/articles/the-ir-has-a-front-door-journal.webp",
+    alt: "Three laboratory trays carry clay shapes, brass tiles, and resolved pieces in sequence.",
+    generated: "GPT Image",
   },
 } as const satisfies ArticleMeta;
 

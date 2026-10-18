@@ -9,13 +9,9 @@ export const article = {
   author: "Elias North",
   tags: ["software", "craft"],
   image: {
-    src: "/images/articles/polish-does-not-compile.jpg",
-    alt: "Painting of two young women in classical dress talking together on a sunlit stone wall beneath trees.",
-    credit: {
-      author: "Henryk Siemiradzki",
-      license: "Public domain",
-      href: "https://commons.wikimedia.org/wiki/File:Henryk_Siemiradzki_Das_Gespr%C3%A4ch.jpg",
-    },
+    src: "/images/articles/polish-does-not-compile-journal.webp",
+    alt: "A speaker feeds small blocks into a brass press while a listener holds up a mirror.",
+    generated: "GPT Image",
   },
 } as const satisfies ArticleMeta;
 

@@ -9,13 +9,9 @@ export const article = {
   author: "Mira Voss",
   tags: ["software"],
   image: {
-    src: "https://upload.wikimedia.org/wikipedia/commons/b/bb/Sydney_Metro_buffer_stop.jpg",
-    alt: "A railway buffer stop at the end of a Sydney Metro siding, topped by two fixed red signals.",
-    credit: {
-      author: "Aebion",
-      license: "CC0 1.0",
-      href: "https://commons.wikimedia.org/wiki/File:Sydney_Metro_buffer_stop.jpg",
-    },
+    src: "/images/articles/who-can-still-wake-this-goroutine-journal.webp",
+    alt: "Clockwork figures sleep in wooden bunks beneath bell cords while a moth tends a loose cord beside one sleeper.",
+    generated: "GPT Image",
   },
 } as const satisfies ArticleMeta;
 

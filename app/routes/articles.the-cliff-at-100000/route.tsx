@@ -9,13 +9,9 @@ export const article = {
   author: "Mira Voss",
   tags: ["software"],
   image: {
-    src: "https://upload.wikimedia.org/wikipedia/commons/f/fe/DPDT_knife_switch_in_closed_position.jpg",
-    alt: "A double-pole, double-throw knife switch sits in one of its two closed positions on a work surface.",
-    credit: {
-      author: "Junkyardsparkle",
-      license: "CC0 1.0",
-      href: "https://commons.wikimedia.org/wiki/File:DPDT_knife_switch_in_closed_position.jpg",
-    },
+    src: "/images/articles/the-cliff-at-100000-journal.webp",
+    alt: "A loaded cart meets a toll gate beside an oversized copper calculating engine.",
+    generated: "GPT Image",
   },
 } as const satisfies ArticleMeta;
 

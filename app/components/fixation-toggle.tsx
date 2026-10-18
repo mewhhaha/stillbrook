@@ -24,8 +24,10 @@ export function FixationToggle() {
 
   const toggle = () => {
     const next = !on;
-    document.documentElement.dataset.fixation = next ? "true" : "false";
-    document.cookie = `fixation=${next ? "on" : "off"}; path=/; max-age=${oneYear}; samesite=lax`;
+    document.documentElement.dataset.fixation = String(next);
+    let preference = "off";
+    if (next) preference = "on";
+    document.cookie = `fixation=${preference}; path=/; max-age=${oneYear}; samesite=lax`;
     for (const listener of listeners) listener();
   };
 
@@ -36,13 +38,9 @@ export function FixationToggle() {
       aria-pressed={on}
       aria-label="Toggle fixation reading"
       title="Fixation reading adds weighted fixation points to each word"
-      className={`rounded-full p-2 transition-colors ${
-        on
-          ? "text-orange-700 dark:text-orange-400"
-          : "text-zinc-600 hover:text-zinc-950 dark:text-zinc-400 dark:hover:text-zinc-50"
-      }`}
+      className="journal-icon-button"
     >
-      <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" className="size-4">
+      <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" className="size-5">
         <path
           fillRule="evenodd"
           d="M11.983 1.907a.75.75 0 00-1.292-.657l-8.5 9.5A.75.75 0 002.75 12h6.572l-1.305 6.093a.75.75 0 001.292.657l8.5-9.5A.75.75 0 0017.25 8h-6.572l1.305-6.093z"

@@ -9,13 +9,9 @@ export const article = {
   author: "Lena Hart",
   tags: ["craft", "web"],
   image: {
-    src: "/images/articles/the-shape-of-a-code-block.jpg",
-    alt: "Close-up of metal movable type letters sorted into the compartments of a wooden type case.",
-    credit: {
-      author: "Willi Heidelbach",
-      license: "CC BY 2.5",
-      href: "https://commons.wikimedia.org/wiki/File:Metal_movable_type.jpg",
-    },
+    src: "/images/articles/the-shape-of-a-code-block-journal.webp",
+    alt: "A craftsperson arranges colored tiles on a lit workbench beside a brass machine feeding out paper.",
+    generated: "GPT Image",
   },
 } as const satisfies ArticleMeta;
 

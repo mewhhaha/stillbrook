@@ -9,13 +9,9 @@ export const article = {
   author: "Still Brook",
   tags: ["software"],
   image: {
-    src: "/images/articles/the-route-changes-the-road.jpg",
-    alt: "Aerial view of a sprawling highway interchange in Dallas, its stacked ramps and lanes carrying streams of cars in every direction.",
-    credit: {
-      author: "Michael Barera",
-      license: "CC BY-SA 4.0",
-      href: "https://commons.wikimedia.org/wiki/File:View_of_interchange_from_Reunion_Tower_August_2015_02.jpg",
-    },
+    src: "/images/articles/the-route-changes-the-road-journal.webp",
+    alt: "Small loaded carts travel along branching roads and bridges while a bird stands beside a direction lever.",
+    generated: "GPT Image",
   },
 } as const satisfies ArticleMeta;
 

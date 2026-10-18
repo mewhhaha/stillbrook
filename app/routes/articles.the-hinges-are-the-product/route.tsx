@@ -9,13 +9,9 @@ export const article = {
   author: "Mira Voss",
   tags: ["web", "software"],
   image: {
-    src: "/images/articles/the-hinges-are-the-product.jpg",
-    alt: "An exposed metal coupling and rubber bellows connect the opening mechanism between two Finnish train doors.",
-    credit: {
-      author: "Edvard10",
-      license: "CC0 1.0",
-      href: "https://commons.wikimedia.org/wiki/File:Door_mechanism.jpg",
-    },
+    src: "/images/articles/the-hinges-are-the-product-journal.webp",
+    alt: "An open cabinet reveals carefully fitted hinges, catches, and drawer guides.",
+    generated: "GPT Image",
   },
 } as const satisfies ArticleMeta;
 

@@ -9,13 +9,9 @@ export const article = {
   author: "Elias North",
   tags: ["software"],
   image: {
-    src: "/images/articles/the-fifth-rewrite.jpg",
-    alt: "An aircraft engine mounted outdoors on a heavy test stand while several workers inspect the machinery.",
-    credit: {
-      author: "Unknown photographer, National Archives and Records Administration",
-      license: "Public domain",
-      href: "https://commons.wikimedia.org/wiki/File:Airplanes_-_Engines_-_Aircraft_testing_field,_Packard_Motor_Co.,_Detroit,_Michigan._Engine_on_testing_stand_-_NARA_-_17338473.jpg",
-    },
+    src: "/images/articles/the-fifth-rewrite-journal.webp",
+    alt: "A tray of wooden nodes sits between an empty stage and a hoist lifting a stone.",
+    generated: "GPT Image",
   },
 } as const satisfies ArticleMeta;
 

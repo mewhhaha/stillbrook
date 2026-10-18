@@ -16,13 +16,9 @@ export const article = {
   author: "Still Brook",
   tags: ["craft"],
   image: {
-    src: "/images/articles/raise-another-bar.jpg",
-    alt: "In a sepia 1913 photograph, a high jumper scissors over a wooden crossbar at Kincaid Field while men in hats watch from below.",
-    credit: {
-      author: "Unknown photographer",
-      license: "Public domain",
-      href: "https://commons.wikimedia.org/wiki/File:1913_high_jump_-_DPLA_-_5c76b23b2a8928d00ad4cf9bebd5bd3e.jpg",
-    },
+    src: "/images/articles/raise-another-bar-journal.webp",
+    alt: "A red capsule with an eye rolls through a blocky corridor beside tall geared columns and a bell.",
+    generated: "GPT Image",
   },
 } as const satisfies ArticleMeta;
 

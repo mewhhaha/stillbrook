@@ -9,13 +9,9 @@ export const article = {
   author: "Elias North",
   tags: ["software"],
   image: {
-    src: "/images/articles/the-compiler-workshop.jpg",
-    alt: "A shared electronics workshop with desks, monitors, tools, drawers, and parts bins arranged around the room.",
-    credit: {
-      author: "James Bastow",
-      license: "CC BY-SA 2.0",
-      href: "https://commons.wikimedia.org/wiki/File:Shared_Workspace.jpg",
-    },
+    src: "/images/articles/the-compiler-workshop-journal.webp",
+    alt: "Three compact workshops display an axe, a balance, and a single-marble track.",
+    generated: "GPT Image",
   },
 } as const satisfies ArticleMeta;
 

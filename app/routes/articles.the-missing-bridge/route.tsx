@@ -9,13 +9,9 @@ export const article = {
   author: "Mira Voss",
   tags: ["craft"],
   image: {
-    src: "/images/articles/the-missing-bridge.jpg",
-    alt: "An unfinished concrete highway deck ends abruptly in mid-air with exposed rebar, while traffic passes on the adjacent completed lanes.",
-    credit: {
-      author: "Schvaxet",
-      license: "CC BY-SA 4.0",
-      href: "https://commons.wikimedia.org/wiki/File:Dunn_Memorial_Bridge_Unfinished_Section_from_side.jpg",
-    },
+    src: "/images/articles/the-missing-bridge-journal.webp",
+    alt: "A logician studies a gap between a hat-shaped banana village and cat-shaped apple orchard.",
+    generated: "GPT Image",
   },
 } as const satisfies ArticleMeta;
 

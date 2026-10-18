@@ -9,13 +9,9 @@ export const article = {
   author: "Still Brook",
   tags: ["craft"],
   image: {
-    src: "https://upload.wikimedia.org/wikipedia/commons/5/59/Plastic-compass.jpg",
-    alt: "A small black plastic compass with a red-and-silver needle rests on a white background.",
-    credit: {
-      author: "Evan-Amos",
-      license: "Public domain",
-      href: "https://commons.wikimedia.org/wiki/File:Plastic-compass.jpg",
-    },
+    src: "/images/articles/a-waypoint-is-part-of-the-level-journal.webp",
+    alt: "Wind-bent grass and a strip of cloth point along a path toward a distant gate.",
+    generated: "GPT Image",
   },
 } as const satisfies ArticleMeta;
 

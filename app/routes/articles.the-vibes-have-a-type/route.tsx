@@ -9,13 +9,9 @@ export const article = {
   author: "Mira Voss",
   tags: ["software"],
   image: {
-    src: "/images/articles/the-vibes-have-a-type.jpg",
-    alt: "Henry Lerolle's painting of a singer and seated musicians gathered beside an organ in a bright church loft.",
-    credit: {
-      author: "Henry Lerolle",
-      license: "Public domain",
-      href: "https://commons.wikimedia.org/wiki/File:WLA_metmuseum_Henry_Lerolle_The_Organ_Rehearsal.jpg",
-    },
+    src: "/images/articles/the-vibes-have-a-type-journal.webp",
+    alt: "A craftsperson adjusts a triangular brass frame beneath a prism casting a rainbow beside a curved line on glass.",
+    generated: "GPT Image",
   },
 } as const satisfies ArticleMeta;
 

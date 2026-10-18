@@ -9,13 +9,9 @@ export const article = {
   author: "Elias North",
   tags: ["software"],
   image: {
-    src: "/images/articles/the-invisible-army.jpg",
-    alt: "A museum diorama of hundreds of painted tin soldiers frozen mid-battle across a model landscape of hills and farmhouses.",
-    credit: {
-      author: "Thomas Quine",
-      license: "CC BY 2.0",
-      href: "https://commons.wikimedia.org/wiki/File:Battle_is_engaged_(26178770262).jpg",
-    },
+    src: "/images/articles/the-invisible-army-journal.webp",
+    alt: "Workers carry crystals between two miniature bases while soldiers guard the path.",
+    generated: "GPT Image",
   },
 } as const satisfies ArticleMeta;
 

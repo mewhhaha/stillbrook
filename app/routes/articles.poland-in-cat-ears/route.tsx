@@ -9,13 +9,9 @@ export const article = {
   author: "Mira Voss",
   tags: ["software", "craft"],
   image: {
-    src: "/images/articles/poland-in-cat-ears.jpg",
-    alt: "A cat lying across a computer keyboard, entirely unbothered by whoever was trying to type.",
-    credit: {
-      author: "Breawycker",
-      license: "CC BY-SA 4.0",
-      href: "https://commons.wikimedia.org/wiki/File:Cat_lying_on_keyboard.jpg",
-    },
+    src: "/images/articles/poland-in-cat-ears-journal.webp",
+    alt: "A cosplayer in cat ears stands beneath convention lights beside an empty survey ledger.",
+    generated: "GPT Image",
   },
 } as const satisfies ArticleMeta;
 

@@ -9,13 +9,9 @@ export const article = {
   author: "Mira Voss",
   tags: ["software"],
   image: {
-    src: "/images/articles/the-type-checker-that-can-wait.jpg",
-    alt: "A mechanical railway interlocking frame with red, blue, and black levers lined up beside a control panel.",
-    credit: {
-      author: "Olga Ernst & Hp.Baumeler",
-      license: "CC BY-SA 4.0",
-      href: "https://commons.wikimedia.org/wiki/File:Mechanisches_Stellwerk_in_Hausen_im_Tal_(2018).jpg",
-    },
+    src: "/images/articles/the-type-checker-that-can-wait-journal.webp",
+    alt: "Three birds sort brass gears and pins on a workbench beneath a clockwork movement in a glass dome.",
+    generated: "GPT Image",
   },
 } as const satisfies ArticleMeta;
 

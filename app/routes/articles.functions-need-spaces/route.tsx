@@ -15,13 +15,9 @@ export const article = {
   author: "Mira Voss",
   tags: ["software"],
   image: {
-    src: "/images/articles/functions-need-spaces.jpg",
-    alt: "The carved dedication plaque at the base of Trajan's Column, with raised dots separating the Latin words.",
-    credit: {
-      author: "MumblerJamie",
-      license: "CC BY-SA 2.0",
-      href: "https://commons.wikimedia.org/wiki/File:Inscription,_Trajan%27s_Column.jpg",
-    },
+    src: "/images/articles/functions-need-spaces-journal.webp",
+    alt: "Two rows of printer's type show cramped blocks beside clearly spaced groups of sorts.",
+    generated: "GPT Image",
   },
 } as const satisfies ArticleMeta;
 

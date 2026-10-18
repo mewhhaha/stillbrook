@@ -24,6 +24,6 @@ Use the shared components when they fit:
 
 Keep bespoke graphics beside the article that uses them. Move one into the shared component library only after another article genuinely needs the same visual language.
 
-Every article also has a hero image in its metadata. Prefer a freely licensed photograph or artwork, usually from Wikimedia Commons, and record the author, license, and source. Real objects, machines, tools, places, and older artwork tend to fit the site better than stock photography or generated art.
+Every article has a distinct field-journal illustration in its metadata: fine ink engraving with restrained brass, terracotta, and olive accents on a transparent background. Match the homepage illustration’s style while choosing a concrete subject from the essay. Use GPT Image, preserve the alpha channel, and check the illustration on both light and dark pages. Save the prompt and record the generation attribution. Existing sourced photographs retain their author, license, and source credits.
 
 Give every image useful alt text and every figure a caption that says what the reader is looking at. The article should still make sense if the reader skips the visual entirely.

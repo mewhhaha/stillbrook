@@ -1,0 +1,34 @@
+{
+  "url": "http://127.0.0.1:4173",
+  "checks": [
+    "Five viewport widths: no document overflow; one theme illustration download",
+    "Search, topic filters, pagination, reload, empty/reset and browser history",
+    "Theme persistence, full article/code, share clipboard, fixation persistence, footer tags and keyboard mobile menu",
+    "Invalid page bounds, combined topic/search, empty unknown topic and real article hero",
+    "Server-rendered filtering and GET search work without JavaScript",
+    "OS dark preference and explicit light override select correct palette and artwork"
+  ],
+  "layout": [
+    {
+      "viewport": 320,
+      "page": 320
+    },
+    {
+      "viewport": 390,
+      "page": 390
+    },
+    {
+      "viewport": 768,
+      "page": 768
+    },
+    {
+      "viewport": 1024,
+      "page": 1024
+    },
+    {
+      "viewport": 1440,
+      "page": 1440
+    }
+  ],
+  "errors": []
+}

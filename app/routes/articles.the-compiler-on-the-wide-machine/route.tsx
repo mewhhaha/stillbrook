@@ -9,13 +9,9 @@ export const article = {
   author: "Elias North",
   tags: ["software"],
   image: {
-    src: "/images/articles/the-compiler-on-the-wide-machine.jpg",
-    alt: "Close-up of a silicon wafer showing a grid of identical microchip dies shimmering in rainbow iridescence.",
-    credit: {
-      author: "Rob Bulmahn",
-      license: "CC BY 2.0",
-      href: "https://commons.wikimedia.org/wiki/File:5C2A5953R_-_49913961083_%E2%80%93_Silicon_Wafer_20200519.jpg",
-    },
+    src: "/images/articles/the-compiler-on-the-wide-machine-journal.webp",
+    alt: "Rows of tiny workers turn evenly on a copper plate while branching paths tangle at its edge.",
+    generated: "GPT Image",
   },
 } as const satisfies ArticleMeta;
 

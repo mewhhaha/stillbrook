@@ -9,13 +9,9 @@ export const article = {
   author: "Still Brook",
   tags: ["craft"],
   image: {
-    src: "https://upload.wikimedia.org/wikipedia/commons/c/cd/Speelgoedmuseum_Deventer%2C_clockwork_wind-up_tin_toy%2C_ship.JPG",
-    alt: "A small painted tin clockwork ship sits on display with its winding mechanism visible at the side.",
-    credit: {
-      author: "Alf van Beem",
-      license: "CC0 1.0",
-      href: "https://commons.wikimedia.org/wiki/File:Speelgoedmuseum_Deventer,_clockwork_wind-up_tin_toy,_ship.JPG",
-    },
+    src: "/images/articles/the-attack-starts-before-the-hit-journal.webp",
+    alt: "A mouse rides a wooden clockwork boat with its sprung bow raised above a rocky stream.",
+    generated: "GPT Image",
   },
 } as const satisfies ArticleMeta;
 

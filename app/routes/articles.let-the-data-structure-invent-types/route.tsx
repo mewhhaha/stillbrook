@@ -9,13 +9,9 @@ export const article = {
   author: "Mira Voss",
   tags: ["software"],
   image: {
-    src: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Type_case_with_movable_types_for_letterpress_printing_in_the_Gutenberg_Museum%2C_Mainz%2C_Germany_%2848988492232%29.jpg/1280px-Type_case_with_movable_types_for_letterpress_printing_in_the_Gutenberg_Museum%2C_Mainz%2C_Germany_%2848988492232%29.jpg",
-    alt: "A wooden printer's type case at the Gutenberg Museum is divided into many compartments holding pieces of movable metal type.",
-    credit: {
-      author: "dronepicr",
-      license: "CC BY 2.0",
-      href: "https://commons.wikimedia.org/wiki/File:Type_case_with_movable_types_for_letterpress_printing_in_the_Gutenberg_Museum,_Mainz,_Germany_(48988492232).jpg",
-    },
+    src: "/images/articles/let-the-data-structure-invent-types-journal.webp",
+    alt: "Two wooden specimen cabinets hold different carved shapes fitted to individual compartments.",
+    generated: "GPT Image",
   },
 } as const satisfies ArticleMeta;
 

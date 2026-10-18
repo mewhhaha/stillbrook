@@ -9,13 +9,9 @@ export const article = {
   author: "Mira Voss",
   tags: ["craft", "software"],
   image: {
-    src: "/images/articles/the-template-is-doing-the-taste.jpg",
-    alt: "Johan Zoffany’s painting of Royal Academicians gathered around a life model in a crowded drawing room lit by an oil lamp.",
-    credit: {
-      author: "Johan Zoffany",
-      license: "Public domain",
-      href: "https://commons.wikimedia.org/wiki/File:The_Portraits_of_the_Academicians_of_the_Royal_Academy,_1771-72,_oil_on_canvas,_The_Royal_Collection_by_Johan_Zoffany.jpg",
-    },
+    src: "/images/articles/the-template-is-doing-the-taste-journal.webp",
+    alt: "A hand places a round botanical tile into a wooden template surrounded by tiles depicting plants and landscapes.",
+    generated: "GPT Image",
   },
 } as const satisfies ArticleMeta;
 

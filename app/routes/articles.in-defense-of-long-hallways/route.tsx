@@ -15,13 +15,9 @@ export const article = {
   author: "Still Brook",
   tags: ["craft"],
   image: {
-    src: "/images/articles/in-defense-of-long-hallways.jpg",
-    alt: "The painted Long Corridor at Beijing's Summer Palace recedes through repeating columns and roof beams toward a distant pavilion.",
-    credit: {
-      author: "Gary Todd",
-      license: "CC0 1.0",
-      href: "https://commons.wikimedia.org/wiki/File:Summer_Palace_Long_Corridor_(9864869886).jpg",
-    },
+    src: "/images/articles/in-defense-of-long-hallways-journal.webp",
+    alt: "A lantern-lit corridor leads to a closed door with a thin wisp of smoke beneath it.",
+    generated: "GPT Image",
   },
 } as const satisfies ArticleMeta;
 

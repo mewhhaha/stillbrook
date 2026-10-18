@@ -9,13 +9,9 @@ export const article = {
   author: "Mira Voss",
   tags: ["web", "software"],
   image: {
-    src: "https://upload.wikimedia.org/wikipedia/commons/8/8c/Arrow_keys.jpg",
-    alt: "Four white arrow keys sit in an inverted-T arrangement on a gray computer keyboard.",
-    credit: {
-      author: "Lars H. Rohwedder (RokerHRO)",
-      license: "Public domain",
-      href: "https://commons.wikimedia.org/wiki/File:Arrow_keys.jpg",
-    },
+    src: "/images/articles/the-browser-should-move-focus-journal.webp",
+    alt: "A hand moves a brass knob on a row of wooden shutters linked by a rail and gears.",
+    generated: "GPT Image",
   },
 } as const satisfies ArticleMeta;
 

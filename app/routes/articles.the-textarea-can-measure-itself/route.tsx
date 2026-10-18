@@ -9,13 +9,9 @@ export const article = {
   author: "Mira Voss",
   tags: ["web", "software"],
   image: {
-    src: "/images/articles/the-textarea-can-measure-itself.jpg",
-    alt: "A red coffee cup and saucer sit on a scratched wooden table beside a small metal spoon.",
-    credit: {
-      author: "Rachel Michetti",
-      license: "CC0",
-      href: "https://scikit-image.org/docs/stable/api/skimage.data.html#skimage.data.coffee",
-    },
+    src: "/images/articles/the-textarea-can-measure-itself-journal.webp",
+    alt: "A brass pen mechanism feeds out a long illustrated paper sheet beside a folded ruler and miniature workshops.",
+    generated: "GPT Image",
   },
 } as const satisfies ArticleMeta;
 

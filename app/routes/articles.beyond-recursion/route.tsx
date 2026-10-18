@@ -17,13 +17,9 @@ export const article = {
   author: "Still Brook",
   tags: ["software"],
   image: {
-    src: "/images/articles/beyond-recursion.jpg",
-    alt: "Six antique painted matryoshka dolls arranged from largest to smallest on a blue museum shelf.",
-    credit: {
-      author: "Лапоть",
-      license: "CC0",
-      href: "https://commons.wikimedia.org/wiki/File:Early_matryoshka_-_All-Russian_Decorative_Art_Museum.jpg",
-    },
+    src: "/images/articles/beyond-recursion-journal.webp",
+    alt: "Branching roots are lifted onto a tray of movable pegs, with one loop and one halted branch.",
+    generated: "GPT Image",
   },
 } as const satisfies ArticleMeta;
 

@@ -9,13 +9,9 @@ export const article = {
   author: "Mira Voss",
   tags: ["software"],
   image: {
-    src: "https://upload.wikimedia.org/wikipedia/commons/3/3a/Copyright_Card_Catalog_Drawer.jpg",
-    alt: "An open Library of Congress card-catalog drawer sits on a wooden table, packed with rows of index cards.",
-    credit: {
-      author: "Michael Holley (Swtpc6800)",
-      license: "Public domain",
-      href: "https://commons.wikimedia.org/wiki/File:Copyright_Card_Catalog_Drawer.jpg",
-    },
+    src: "/images/articles/refs-should-stop-being-files-journal.webp",
+    alt: "Blank file cards sit in drawers beside a hand-cranked rotating card index.",
+    generated: "GPT Image",
   },
 } as const satisfies ArticleMeta;
 

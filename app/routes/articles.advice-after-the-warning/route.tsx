@@ -9,13 +9,9 @@ export const article = {
   author: "Mira Voss",
   tags: ["web", "craft"],
   image: {
-    src: "/images/articles/advice-after-the-warning.jpg",
-    alt: "A lighthouse standing on a rocky headland above the sea, marking both the hazard and the way past it.",
-    credit: {
-      author: "Superbass",
-      license: "CC BY-SA 4.0",
-      href: "https://commons.wikimedia.org/wiki/File:2019-07-20-Dingle_Lighthouse-0673.jpg",
-    },
+    src: "/images/articles/advice-after-the-warning-journal.webp",
+    alt: "Two hands review a wooden task board with blank cards, triangular navigation buttons, and a red button.",
+    generated: "GPT Image",
   },
 } as const satisfies ArticleMeta;
 

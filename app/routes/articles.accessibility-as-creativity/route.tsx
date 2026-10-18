@@ -10,13 +10,9 @@ export const article = {
   author: "Mira Voss",
   tags: ["web", "craft"],
   image: {
-    src: "/images/articles/accessibility-as-creativity.jpg",
-    alt: "Claude Monet’s painting of two wheatstacks in a pale late-summer field, one subject from a series he repainted under changing light and weather.",
-    credit: {
-      author: "Claude Monet",
-      license: "Public domain",
-      href: "https://commons.wikimedia.org/wiki/File:Claude_Monet_-_Stacks_of_Wheat_(End_of_Summer)_-_1985.1103_-_Art_Institute_of_Chicago.jpg",
-    },
+    src: "/images/articles/accessibility-as-creativity-journal.webp",
+    alt: "Three differently colored curtains reveal the same tactile public noticeboard.",
+    generated: "GPT Image",
   },
 } as const satisfies ArticleMeta;
 

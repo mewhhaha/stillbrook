@@ -9,13 +9,9 @@ export const article = {
   author: "Mira Voss",
   tags: ["software", "craft"],
   image: {
-    src: "/images/articles/a-problem-worth-the-tokens.jpg",
-    alt: "A factory worker feeds material into a nail-cutting machine powered by its own electric motor.",
-    credit: {
-      author: "Jack Boucher, Historic American Engineering Record",
-      license: "Public domain",
-      href: "https://commons.wikimedia.org/wiki/File:INTERIOR_VIEW,_MAIN_FLOOR,_SHOWING_FEEDER_OPERATING_A_NAIL_CUTTING_MACHINE;_NOTICE_INDIVIDUAL_ELECTRIC_MOTOR_-_LaBelle_Iron_Works,_Thirtieth_and_Wood_Streets,_Wheeling,_Ohio_HAER_WVA,35-WHEEL,38-22.tif",
-    },
+    src: "/images/articles/a-problem-worth-the-tokens-journal.webp",
+    alt: "A drafted order balances against a delivered parcel beside a chain of approval and receipt objects.",
+    generated: "GPT Image",
   },
 } as const satisfies ArticleMeta;
 

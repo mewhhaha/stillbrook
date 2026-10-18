@@ -9,13 +9,9 @@ export const article = {
   author: "Mira Voss",
   tags: ["software"],
   image: {
-    src: "/images/articles/tokens-for-yesterday.jpg",
-    alt: "Rows of labeled cardboard archive boxes on tall shelves receding down a corridor in the depot of the Dutch National Archives.",
-    credit: {
-      author: "Romaine",
-      license: "CC0",
-      href: "https://commons.wikimedia.org/wiki/File:Nationaal_Archief_Den_Haag_(1).JPG",
-    },
+    src: "/images/articles/tokens-for-yesterday-journal.webp",
+    alt: "A bird loaded with bundles of notes crosses a narrow brook bridge toward another bird beside a small wrapped wrench.",
+    generated: "GPT Image",
   },
 } as const satisfies ArticleMeta;
 

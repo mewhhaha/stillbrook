@@ -15,13 +15,9 @@ export const article = {
   author: "Mira Voss",
   tags: ["software"],
   image: {
-    src: "/images/articles/the-review-needs-a-suspect.jpg",
-    alt: "A hand holds a magnifying glass over a sheet of old postage stamps, bringing a single olive-green stamp into sharp focus.",
-    credit: {
-      author: "Heptagon",
-      license: "Public domain",
-      href: "https://commons.wikimedia.org/wiki/File:Magnifying_glass2.jpg",
-    },
+    src: "/images/articles/the-review-needs-a-suspect-journal.webp",
+    alt: "A bird traces a red thread across a bridge drawing, where a magnifying glass enlarges one rivet.",
+    generated: "GPT Image",
   },
 } as const satisfies ArticleMeta;
 

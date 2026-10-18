@@ -9,13 +9,9 @@ export const article = {
   author: "Mira Voss",
   tags: ["software"],
   image: {
-    src: "https://upload.wikimedia.org/wikipedia/commons/5/51/Magnetic_core.jpg",
-    alt: "A microscope photograph shows black ferrite memory cores threaded by red and green wires in a regular grid.",
-    credit: {
-      author: "H.J. Sommer III, Professor of Mechanical Engineering, Penn State University",
-      license: "CC BY 2.5",
-      href: "https://commons.wikimedia.org/wiki/File:Magnetic_core.jpg",
-    },
+    src: "/images/articles/the-page-is-the-work-unit-journal.webp",
+    alt: "A bird carrying a satchel pulls a thread from a cluster of beads beneath a raised floorboard.",
+    generated: "GPT Image",
   },
 } as const satisfies ArticleMeta;
 

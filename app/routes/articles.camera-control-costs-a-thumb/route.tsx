@@ -9,13 +9,9 @@ export const article = {
   author: "Still Brook",
   tags: ["craft"],
   image: {
-    src: "https://upload.wikimedia.org/wikipedia/commons/b/b4/Old_school_camera.jpg",
-    alt: "A cream and black Asahi Pentax film camera from around 1965 rests on a textured surface.",
-    credit: {
-      author: "Swanie227",
-      license: "CC0 1.0",
-      href: "https://commons.wikimedia.org/wiki/File:Old_school_camera.jpg",
-    },
+    src: "/images/articles/camera-control-costs-a-thumb-journal.webp",
+    alt: "A brass camera and two-stick gamepad sit beside a viewfinder showing a runner near a doorway.",
+    generated: "GPT Image",
   },
 } as const satisfies ArticleMeta;
 

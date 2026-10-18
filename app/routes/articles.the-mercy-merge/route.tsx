@@ -9,13 +9,9 @@ export const article = {
   author: "Mira Voss",
   tags: ["software", "craft"],
   image: {
-    src: "/images/articles/the-mercy-merge.jpg",
-    alt: "Officials steady an exhausted Dorando Pietri as he crosses the finish line of the 1908 Olympic marathon in London.",
-    credit: {
-      author: "Unknown photographer",
-      license: "Public domain",
-      href: "https://commons.wikimedia.org/wiki/File:Dorando_Pietri_1908b.jpg",
-    },
+    src: "/images/articles/the-mercy-merge-journal.webp",
+    alt: "An editor inspects a cracked bridge plank as tired builders and waiting travelers look on.",
+    generated: "GPT Image",
   },
 } as const satisfies ArticleMeta;
 

@@ -10,13 +10,9 @@ export const article = {
   author: "Still Brook",
   tags: ["software", "web"],
   image: {
-    src: "/images/articles/sixty-kilobytes-and-a-window.jpg",
-    alt: "An original Game Boy lying on a white surface with a Tetris cartridge propped up against it.",
-    credit: {
-      author: "Sammlung der Medien und Wissenschaft",
-      license: "CC BY 4.0",
-      href: "https://commons.wikimedia.org/wiki/File:Game_Boy_and_Tetris.jpg",
-    },
+    src: "/images/articles/sixty-kilobytes-and-a-window-journal.webp",
+    alt: "A tiny falling-block game sits in a small frame beside a hinged desktop version.",
+    generated: "GPT Image",
   },
 } as const satisfies ArticleMeta;
 

@@ -17,13 +17,9 @@ export const article = {
   author: "Mira Voss",
   tags: ["software"],
   image: {
-    src: "/images/articles/types-considered-harmful.jpg",
-    alt: "Gilded comedy and tragedy masks mounted in the wrought-iron canopy over a theater entrance.",
-    credit: {
-      author: "psyberartist",
-      license: "CC BY 2.0",
-      href: "https://commons.wikimedia.org/wiki/File:Comedy_and_tragedy_(8107431738).jpg",
-    },
+    src: "/images/articles/types-considered-harmful-journal.webp",
+    alt: "A bird in an apron holds a hollow clay figure above an empty drawer beside more figures and a glass display case.",
+    generated: "GPT Image",
   },
 } as const satisfies ArticleMeta;
 

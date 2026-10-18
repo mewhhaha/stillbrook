@@ -9,13 +9,9 @@ export const article = {
   author: "Elias North",
   tags: ["software"],
   image: {
-    src: "/images/articles/the-call-was-cheaper.jpg",
-    alt: "A museum demonstrator stands beside a wooden Gutenberg-style printing press loaded with a sheet of paper.",
-    credit: {
-      author: "vlasta2",
-      license: "CC BY 2.0",
-      href: "https://commons.wikimedia.org/wiki/File:PrintMus_038.jpg",
-    },
+    src: "/images/articles/the-call-was-cheaper-journal.webp",
+    alt: "A hand press beside a crowded row of duplicate carved blocks.",
+    generated: "GPT Image",
   },
 } as const satisfies ArticleMeta;
 

@@ -8,6 +8,11 @@ export const article = {
   published: "2026-07-13T13:24:00Z",
   author: "Mira Voss",
   tags: ["software", "craft"],
+  image: {
+    src: "/images/articles/the-catalog-dreams-in-i32-journal.webp",
+    alt: "A wooden cabinet displays tiny mechanical specimens in glass bottles among stones and wild plants.",
+    generated: "GPT Image",
+  },
 } as const satisfies ArticleMeta;
 
 export function meta() {

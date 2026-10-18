@@ -9,13 +9,9 @@ export const article = {
   author: "Mira Voss",
   tags: ["software"],
   image: {
-    src: "/images/articles/the-locker-at-the-corner.jpg",
-    alt: "An InPost parcel locker standing on a street corner in Tomaszów Mazowiecki, its yellow bank of compartments facing the sidewalk.",
-    credit: {
-      author: "WrS.tm.pl",
-      license: "Public domain",
-      href: "https://commons.wikimedia.org/wiki/File:Paczkomat_InPost_TMS02A_przy_ul._%C5%9Bw.Antoniego_68_w_Tomaszowie_Mazowieckim,_PL,_EU._cc0.jpg",
-    },
+    src: "/images/articles/the-locker-at-the-corner-journal.webp",
+    alt: "A resident collects a parcel from neighborhood lockers beside a grocery store.",
+    generated: "GPT Image",
   },
 } as const satisfies ArticleMeta;
 

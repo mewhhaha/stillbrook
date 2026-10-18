@@ -9,13 +9,9 @@ export const article = {
   author: "Still Brook",
   tags: ["craft"],
   image: {
-    src: "https://upload.wikimedia.org/wikipedia/commons/5/56/Rear-view_mirror.jpg",
-    alt: "A rear-view mirror inside a Mazda reflects parked cars behind it on a rainy day, with an orange parking pass hanging from the mirror.",
-    credit: {
-      author: "Derrick Coetzee",
-      license: "Public domain",
-      href: "https://commons.wikimedia.org/wiki/File:Rear-view_mirror.jpg",
-    },
+    src: "/images/articles/keep-the-threat-where-you-left-it-journal.webp",
+    alt: "A traveler carries a bronze mirror reflecting soldiers on the path behind him.",
+    generated: "GPT Image",
   },
 } as const satisfies ArticleMeta;
 

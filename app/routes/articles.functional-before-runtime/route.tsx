@@ -9,13 +9,9 @@ export const article = {
   author: "Elias North",
   tags: ["software"],
   image: {
-    src: "/images/articles/functional-before-runtime.jpg",
-    alt: "Metal movable type for the Thai script assembled and clamped in a composing stick, resting on dark cloth in a museum display.",
-    credit: {
-      author: "Paul_012",
-      license: "CC BY-SA 4.0",
-      href: "https://commons.wikimedia.org/wiki/File:Thai_movable_type_on_composing_stick,_Bangkok_National_Museum.jpg",
-    },
+    src: "/images/articles/functional-before-runtime-journal.webp",
+    alt: "A brass mold forms wooden function pieces into a simple tool with a direct piston and spring.",
+    generated: "GPT Image",
   },
 } as const satisfies ArticleMeta;
 

@@ -16,13 +16,9 @@ export const article = {
   author: "Elias North",
   tags: ["software"],
   image: {
-    src: "/images/articles/typeclasses-with-the-grain.jpg",
-    alt: "A black block plane resting on a wooden workbench surrounded by curled wood shavings.",
-    credit: {
-      author: "fireskystudios.com asthetik",
-      license: "CC0",
-      href: "https://commons.wikimedia.org/wiki/File:Shaving_wood_(Unsplash).jpg",
-    },
+    src: "/images/articles/typeclasses-with-the-grain-journal.webp",
+    alt: "A carpenter fits two thick wooden beams together beside chisels, shavings, and discarded joint templates.",
+    generated: "GPT Image",
   },
 } as const satisfies ArticleMeta;
 

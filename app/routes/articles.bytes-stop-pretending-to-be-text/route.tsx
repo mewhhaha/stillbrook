@@ -9,13 +9,9 @@ export const article = {
   author: "Mira Voss",
   tags: ["software", "web"],
   image: {
-    src: "/images/articles/bytes-stop-pretending-to-be-text.jpg",
-    alt: "Coils of yellow five-hole and pink eight-hole punched paper tape sit on a pale surface.",
-    credit: {
-      author: "TedColes",
-      license: "Public domain",
-      href: "https://commons.wikimedia.org/wiki/File:PaperTapes-5and8Hole.jpg",
-    },
+    src: "/images/articles/bytes-stop-pretending-to-be-text-journal.webp",
+    alt: "Black glass beads enter a brass four-part die while two incomplete marks wait at the edge.",
+    generated: "GPT Image",
   },
 } as const satisfies ArticleMeta;
 

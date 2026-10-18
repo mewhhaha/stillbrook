@@ -1,0 +1,77 @@
+{
+  "styleReference": "public/images/journal/brook-machine.webp",
+  "entries": [
+    {
+      "slug": "goose-keeps-the-address",
+      "output": "public/images/articles/goose-keeps-the-address-journal.webp",
+      "alt": "A goose stands beside a compartmented brass trough containing colored stones and a crank at one end.",
+      "prompt": "Create a new 1536 x 1024 landscape hero illustration for the Still Brook field journal. Fine copperplate engraving, delicate hand-drawn crosshatching, warm dark ink and restrained aged brass, terracotta and olive colors. Quietly curious Victorian naturalist engineering, like the previously viewed brook-machine illustration. Full subject visible, centered in central 75% with generous empty margins. Genuine transparent background including gaps between objects. No colored paper backdrop, no text, letters, numbers, labels, logos, watermark or frame. No photorealism or neon. Scene: one lifelike white goose with muted terracotta bill stands to the left of a long low brass trough on wooden feet. The trough contains a row of fixed compartments holding smooth olive and terracotta stones. On the far right a small hand crank extends an empty matching section of the trough; all existing stones remain where they are. Keep the physical scene simple and believable. The entire goose, including feet, and complete trough must remain inside the canvas. This is a visual metaphor for growing an array without moving its existing elements.",
+      "source": "/home/jacobt/.codex/generated_images/01a14c5a-0069-7b13-93e3-4615068e1a63/exec-70362eb8-9bcb-4148-8ec4-841cc6496172.png",
+      "generated": "GPT Image",
+      "transparent_background": true,
+      "width": 1536,
+      "height": 1024,
+      "webpQuality": 82
+    },
+    {
+      "slug": "lobster-borrows-the-argument",
+      "output": "public/images/articles/lobster-borrows-the-argument-journal.webp",
+      "alt": "A terracotta lobster holds olive thread running from a large wooden spool toward two brass winders.",
+      "prompt": "Create a new 1536 x 1024 landscape hero illustration for the Still Brook field journal. Fine copperplate engraving, delicate hand-drawn crosshatching, warm dark ink and restrained aged brass, terracotta and olive colors. Quietly curious Victorian naturalist engineering, like the previously viewed brook-machine illustration. Full subject visible, centered in central 75% with generous empty margins. Genuine transparent background including gaps between objects. No colored paper backdrop, no text, letters, numbers, labels, logos, watermark or frame. No photorealism or neon. Scene: a lifelike muted terracotta lobster sits between one large wooden spool of olive thread and two small brass bobbin winders on a modest workbench. A continuous visible thread runs from the shared spool through the lobster's gently raised claws toward the winders. The spool is a single source used by both tools, a metaphor for borrowing without making duplicate owners. Full lobster including antennae and all tools visible. Keep this an elegant sparse specimen illustration, not a diagram.",
+      "source": "/home/jacobt/.codex/generated_images/01a14c5a-0069-7b13-93e3-4615068e1a63/exec-0a3ea8c4-bf57-4756-97c2-45eb872af2a0.png",
+      "generated": "GPT Image",
+      "transparent_background": true,
+      "width": 1536,
+      "height": 1024,
+      "webpQuality": 82
+    },
+    {
+      "slug": "jai-puts-the-build-in-the-program",
+      "output": "public/images/articles/jai-puts-the-build-in-the-program-journal.webp",
+      "alt": "A mechanical arm fits a gear into an open brass workshop, with spare cogs and a caliper in front.",
+      "prompt": "Create a new landscape 1536 x 1024 article hero illustration for Still Brook. Match the visual style of the field-journal reference shown earlier: fine copperplate engraving, dense delicate hand-drawn crosshatching, warm dark ink, muted aged brass, terracotta and olive accents, quietly odd Victorian naturalist engineering. Scene: a small brass clockwork workshop on a short wooden workbench, its hinged side opened to show gears, and a jointed mechanical arm fitting a newly machined cog into the workshop's own drive mechanism. Beside it is a simple caliper and two spare cogs. The machine can work on itself, a concrete metaphor for Jai compiling and inspecting a program using code in the same language. Keep the arrangement simple, full subject completely visible, centered in the middle 75% of the canvas with generous empty margins. True transparent background, including gaps between objects; no paper-colored rectangular backdrop. The object's own cream enamel and wood can be opaque. NO letters, text, numbers, labels, logos, borders, diagrams, watermark, neon or photographic rendering.",
+      "source": "/home/jacobt/.codex/generated_images/01a14c5a-0069-7b13-93e3-4615068e1a63/exec-ae79a7b6-8ceb-4da4-b166-9db1e9bbc679.png",
+      "generated": "GPT Image",
+      "transparent_background": true,
+      "width": 1536,
+      "height": 1024,
+      "webpQuality": 82
+    },
+    {
+      "slug": "a-million-lines-is-a-budget",
+      "output": "public/images/articles/a-million-lines-is-a-budget-journal.webp",
+      "alt": "Three brass printing presses feed paper strips into one finishing roller beside an unnumbered stopwatch.",
+      "prompt": "Create a brand-new landscape 1536 x 1024 article hero illustration for Still Brook field journal. Fine copperplate engraving and delicate hand-drawn crosshatching; warm dark ink, cream enamel, muted aged brass, terracotta, olive. Quiet, ingenious naturalist workshop mood like the previously viewed brook-machine reference. Center the complete scene in middle 75% with 12% generous empty margins on every side. Full subject visible. Genuine transparent background with no paper rectangle, no background wash or scene behind the subject. No words, letters, numbers, labels, logos, watermark, infographic, hard frame, neon or photorealism. Scene: three small parallel brass printing presses arranged side by side on a low bench, each feeding a narrow blank cream paper strip toward one small finishing roller at the right. The strips converge at this single slow final roller. A small antique stopwatch with a blank unnumbered face rests beside the roller. All presses, strips and watch fully visible. A tactile metaphor for parallel compiler work meeting a serial bottleneck. Sparse, readable arrangement; no printed text or markings.",
+      "source": "/home/jacobt/.codex/generated_images/01a14c5a-0069-7b13-93e3-4615068e1a63/exec-deb0bfcb-282c-47c0-be40-5dd4822d228f.png",
+      "generated": "GPT Image",
+      "transparent_background": true,
+      "width": 1536,
+      "height": 1024,
+      "webpQuality": 82
+    },
+    {
+      "slug": "the-trace-is-an-interpreter",
+      "output": "public/images/articles/the-trace-is-an-interpreter-journal.webp",
+      "alt": "A brass machine carries olive tokens between trays while a recording arm draws a line on a paper roll.",
+      "prompt": "Create a brand-new landscape 1536 x 1024 article hero illustration for Still Brook field journal. Fine copperplate engraving and delicate hand-drawn crosshatching; warm dark ink, cream enamel, muted aged brass, terracotta, olive. Quiet, ingenious naturalist workshop mood like the previously viewed brook-machine reference. Center the complete scene in middle 75% with 12% generous empty margins on every side. Full subject visible. Genuine transparent background with no paper rectangle, no background wash or scene behind the subject. No words, letters, numbers, labels, logos, watermark, infographic, hard frame, neon or photorealism. Scene: a compact brass machine with two small wooden input and output trays. Attached beside it, an elegant mechanical recording arm follows the machine's motion and draws a simple continuous terracotta trace on a narrow unrolling paper strip. A separate small glass vessel collects loose olive tokens. The recorder observes the working mechanism without replacing it. Keep full machine, paper strip, recording arm and token vessel visible. A restrained metaphor for typed effect handlers adding an observable trace around an operation.",
+      "source": "/home/jacobt/.codex/generated_images/01a14c5a-0069-7b13-93e3-4615068e1a63/exec-6dffcaf5-7480-4a61-9eea-0dda472ffc6a.png",
+      "generated": "GPT Image",
+      "transparent_background": true,
+      "width": 1536,
+      "height": 1024,
+      "webpQuality": 82
+    },
+    {
+      "slug": "let-me-stay-in-the-loop",
+      "output": "public/images/articles/let-me-stay-in-the-loop-journal.webp",
+      "alt": "A hand turns a brass drawing machine's knob while its pencil sketches a leaf, beside an olive sprig.",
+      "prompt": "Create a brand-new landscape 1536 x 1024 article hero illustration for Still Brook field journal. Fine copperplate engraving and delicate hand-drawn crosshatching; warm dark ink, cream enamel, muted aged brass, terracotta, olive. Quiet, ingenious naturalist workshop mood like the previously viewed brook-machine reference. Center the complete scene in middle 75% with 12% generous empty margins on every side. Full subject visible. Genuine transparent background with no paper rectangle, no background wash or scene behind the subject. No words, letters, numbers, labels, logos, watermark, infographic, hard frame, neon or photorealism. Scene: a human hand enters from one side and adjusts a large plain brass knob on a small antique drawing machine. Its hinged pencil arm is in the middle of sketching the outline of a single olive leaf on a small cream sheet held flat in front of it. The hand and pencil are close together, suggesting an immediate response and active participation. Two faint earlier leaf contours remain on the same sheet. A tiny real olive sprig rests nearby. Full machine and sheet visible, hand naturally cropped at wrist at outer margin only. Minimal arrangement. A metaphor for fast creative feedback while the maker stays in the loop.",
+      "source": "/home/jacobt/.codex/generated_images/01a14c5a-0069-7b13-93e3-4615068e1a63/exec-55be9684-81c4-4884-a67a-c15d2894ae90.png",
+      "generated": "GPT Image",
+      "transparent_background": true,
+      "width": 1536,
+      "height": 1024,
+      "webpQuality": 82
+    }
+  ]
+}

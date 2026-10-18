@@ -9,13 +9,9 @@ export const article = {
   author: "Mira Voss",
   tags: ["web", "craft"],
   image: {
-    src: "/images/articles/who-the-button-hides.jpg",
-    alt: "Hand-colored engraving of the Mechanical Turk chess automaton, a turbaned figure seated behind a chessboard with the cabinet doors open to reveal clockwork inside.",
-    credit: {
-      author: "Joseph Racknitz",
-      license: "Public domain",
-      href: "https://commons.wikimedia.org/wiki/File:Racknitz_-_The_Turk_1.jpg",
-    },
+    src: "/images/articles/who-the-button-hides-journal.webp",
+    alt: "A large brass button sits beside a rainy street where a courier brings steaming soup to a person at a doorway.",
+    generated: "GPT Image",
   },
 } as const satisfies ArticleMeta;
 

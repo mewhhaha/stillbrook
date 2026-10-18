@@ -8,13 +8,9 @@ export const article = {
   author: "Mira Voss",
   tags: ["craft", "software"],
   image: {
-    src: "/images/articles/first-light.jpg",
-    alt: "A worn dirt footpath winding through grass toward a stand of sunlit birch trees, flanked by russet bracken.",
-    credit: {
-      author: "Roger Jones",
-      license: "CC BY-SA 2.0",
-      href: "https://commons.wikimedia.org/wiki/File:Sunlight_on_the_path_-_geograph.org.uk_-_2900853.jpg",
-    },
+    src: "/images/articles/first-light-journal.webp",
+    alt: "A returning traveler follows small stones along a garden path in early light.",
+    generated: "GPT Image",
   },
 } as const satisfies ArticleMeta;
 

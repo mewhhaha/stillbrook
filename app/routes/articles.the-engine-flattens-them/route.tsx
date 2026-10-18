@@ -9,13 +9,9 @@ export const article = {
   author: "Mira Voss",
   tags: ["software", "web"],
   image: {
-    src: "/images/articles/the-engine-flattens-them.jpg",
-    alt: "Allyson Felix crosses the finish line ahead of four competitors in the women's 200 metres at the 2007 World Championships.",
-    credit: {
-      author: "Eckhard Pecher",
-      license: "CC BY 2.5",
-      href: "https://commons.wikimedia.org/wiki/File:Osaka07_D7A_W200M_finish.jpg",
-    },
+    src: "/images/articles/the-engine-flattens-them-journal.webp",
+    alt: "Parallel channels carry seeds across a hillside while a mill wheel disrupts one stream.",
+    generated: "GPT Image",
   },
 } as const satisfies ArticleMeta;
 

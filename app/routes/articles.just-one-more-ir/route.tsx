@@ -18,13 +18,9 @@ export const article = {
   author: "Elias North",
   tags: ["software"],
   image: {
-    src: "/images/articles/just-one-more-ir.jpg",
-    alt: "Adolph von Menzel’s painting of an iron rolling mill crowded with workers tending furnaces, rollers, and glowing metal at different production stages.",
-    credit: {
-      author: "Adolph von Menzel",
-      license: "Public domain",
-      href: "https://commons.wikimedia.org/wiki/File:Adolph_Menzel_-_Eisenwalzwerk_-_Google_Art_Project.jpg",
-    },
+    src: "/images/articles/just-one-more-ir-journal.webp",
+    alt: "Four dies reshape a small lever from clay impression to finished spring.",
+    generated: "GPT Image",
   },
 } as const satisfies ArticleMeta;
 

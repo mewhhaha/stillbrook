@@ -9,13 +9,9 @@ export const article = {
   author: "Elias North",
   tags: ["software", "craft"],
   image: {
-    src: "/images/articles/the-backend-developer-costume.jpg",
-    alt: "Paul Cézanne’s painting of Pierrot in white and Harlequin in a diamond-patterned costume standing beside one another before a curtain.",
-    credit: {
-      author: "Paul Cézanne",
-      license: "Public domain",
-      href: "https://commons.wikimedia.org/wiki/File:Mardi_gras,_par_Paul_C%C3%A9zanne,_Yorck.jpg",
-    },
+    src: "/images/articles/the-backend-developer-costume-journal.webp",
+    alt: "A worker repairs blank paper slips at a desk surrounded by empty chairs draped with decorated coats.",
+    generated: "GPT Image",
   },
 } as const satisfies ArticleMeta;
 

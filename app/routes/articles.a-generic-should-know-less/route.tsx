@@ -8,6 +8,11 @@ export const article = {
   published: "2026-08-15T07:08:00Z",
   author: "Mira Voss",
   tags: ["software"],
+  image: {
+    src: "/images/articles/a-generic-should-know-less-journal.webp",
+    alt: "A brass aperture reveals three faces of a many-sided stone beside one reusable tool.",
+    generated: "GPT Image",
+  },
 } as const satisfies ArticleMeta;
 
 export function meta() {

@@ -8,6 +8,11 @@ export const article = {
   published: "2026-07-14T08:15:00Z",
   author: "Mira Voss",
   tags: ["web", "craft"],
+  image: {
+    src: "/images/articles/the-page-before-css-journal.webp",
+    alt: "A brass desk lamp lights a payment card, calendar, invoice tray, pause lever, and covered red cross beside a bird.",
+    generated: "GPT Image",
+  },
 } as const satisfies ArticleMeta;
 
 export function meta() {

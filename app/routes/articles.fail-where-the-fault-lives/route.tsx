@@ -9,13 +9,9 @@ export const article = {
   author: "Still Brook",
   tags: ["software"],
   image: {
-    src: "/images/articles/fail-where-the-fault-lives.jpg",
-    alt: "Rows of white ceramic screw-in fuses on an old wall-mounted fuse board, each fuse guarding its own circuit.",
-    credit: {
-      author: "Santeri Viinamäki",
-      license: "CC BY-SA 4.0",
-      href: "https://commons.wikimedia.org/wiki/File:Fuse_board_20180630.jpg",
-    },
+    src: "/images/articles/fail-where-the-fault-lives-journal.webp",
+    alt: "A cracked vial spills into its own brass basin while neighboring jars remain upright.",
+    generated: "GPT Image",
   },
 } as const satisfies ArticleMeta;
 

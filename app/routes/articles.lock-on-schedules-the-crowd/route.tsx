@@ -9,13 +9,9 @@ export const article = {
   author: "Still Brook",
   tags: ["craft"],
   image: {
-    src: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Alexandre-Auguste_Robineau_%281747-1828%29_-_The_Fencing-Match_between_the_Chevalier_de_Saint-George_and_the_Chevalier_d%27Eon_-_RCIN_400636_-_Royal_Collection.jpg/1280px-Alexandre-Auguste_Robineau_%281747-1828%29_-_The_Fencing-Match_between_the_Chevalier_de_Saint-George_and_the_Chevalier_d%27Eon_-_RCIN_400636_-_Royal_Collection.jpg",
-    alt: "Alexandre-Auguste Robineau's painting of the Chevalier de Saint-George and the Chevalier d'Eon fencing while a large audience watches from the room around them.",
-    credit: {
-      author: "Alexandre-Auguste Robineau",
-      license: "Public domain",
-      href: "https://commons.wikimedia.org/wiki/File:Alexandre-Auguste_Robineau_(1747-1828)_-_The_Fencing-Match_between_the_Chevalier_de_Saint-George_and_the_Chevalier_d%27Eon_-_RCIN_400636_-_Royal_Collection.jpg",
-    },
+    src: "/images/articles/lock-on-schedules-the-crowd-journal.webp",
+    alt: "A brass sighting ring frames one of two dueling fencers while others wait nearby.",
+    generated: "GPT Image",
   },
 } as const satisfies ArticleMeta;
 

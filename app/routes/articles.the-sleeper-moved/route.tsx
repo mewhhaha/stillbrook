@@ -9,13 +9,9 @@ export const article = {
   author: "Mira Voss",
   tags: ["software"],
   image: {
-    src: "/images/articles/the-sleeper-moved.jpg",
-    alt: "Workers sit in a long row operating Linotype machines inside a department-store printing room in the 1930s.",
-    credit: {
-      author: "AE Foster",
-      license: "Public domain",
-      href: "https://commons.wikimedia.org/wiki/File:Linotype_machines,_Anthony_Hordern_and_Sons_department_store,_c._1935.jpg",
-    },
+    src: "/images/articles/the-sleeper-moved-journal.webp",
+    alt: "A carved wooden heron passes through a stone doorway as measuring supports crumble away behind it.",
+    generated: "GPT Image",
   },
 } as const satisfies ArticleMeta;
 

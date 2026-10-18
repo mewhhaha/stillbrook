@@ -9,13 +9,9 @@ export const article = {
   author: "Mira Voss",
   tags: ["software"],
   image: {
-    src: "/images/articles/the-garage-years-later.jpg",
-    alt: "In Ferdinand Hodler's 1879 oil painting, two watchmakers work at a bench facing the window of a Madrid workshop while a third man stands reading a thick book, a wall clock hanging on the left wall.",
-    credit: {
-      author: "Ferdinand Hodler",
-      license: "Public domain",
-      href: "https://commons.wikimedia.org/wiki/File:Hodler_-_Uhrmacherwerkst%C3%A4tte_in_Madrid_-_1879.jpeg",
-    },
+    src: "/images/articles/the-garage-years-later-journal.webp",
+    alt: "A crowded garage workbench holds two mechanical devices among jars, hand tools, and a sleeping cat.",
+    generated: "GPT Image",
   },
 } as const satisfies ArticleMeta;
 

@@ -9,13 +9,9 @@ export const article = {
   author: "Mira Voss",
   tags: ["software"],
   image: {
-    src: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Electrical_Relays.jpg/1280px-Electrical_Relays.jpg",
-    alt: "Several electrical relays are mounted side by side on a rail, with their terminals and labels visible.",
-    credit: {
-      author: "Tomas Castelazo",
-      license: "CC BY-SA 4.0",
-      href: "https://commons.wikimedia.org/wiki/File:Electrical_Relays.jpg",
-    },
+    src: "/images/articles/the-delay-belongs-in-the-import-journal.webp",
+    alt: "Three brass and wooden boxes beside a brook, with a lever activating the waterwheel inside the only open box.",
+    generated: "GPT Image",
   },
 } as const satisfies ArticleMeta;
 

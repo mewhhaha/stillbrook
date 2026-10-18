@@ -9,13 +9,9 @@ export const article = {
   author: "Still Brook",
   tags: ["software"],
   image: {
-    src: "/images/articles/grain-meets-you-halfway.jpg",
-    alt: "Van Gogh painting of a golden wheat field swaying beneath swirling clouds, with dark cypresses and olive trees at its edge.",
-    credit: {
-      author: "Vincent van Gogh",
-      license: "Public domain",
-      href: "https://commons.wikimedia.org/wiki/File:Wheat-Field-with-Cypresses-(1889)-Vincent-van-Gogh-Met.jpg",
-    },
+    src: "/images/articles/grain-meets-you-halfway-journal.webp",
+    alt: "A hand-weaves reeds into a mat that passes through a brass opening as a glass bead.",
+    generated: "GPT Image",
   },
 } as const satisfies ArticleMeta;
 

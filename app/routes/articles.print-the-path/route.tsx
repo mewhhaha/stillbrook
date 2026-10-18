@@ -9,13 +9,9 @@ export const article = {
   author: "Still Brook",
   tags: ["software", "craft"],
   image: {
-    src: "/images/articles/print-the-path.jpg",
-    alt: "A line of hare tracks printed across the snow of a frozen lake in Lapland, leading toward a beached boat.",
-    credit: {
-      author: "Ximonic (Simo Räsänen)",
-      license: "CC BY-SA 3.0",
-      href: "https://commons.wikimedia.org/wiki/File:Snow_hare_tracks_and_a_boat_on_lake_S%C3%A4rkij%C3%A4rvi,_Muonio,_Lapland,_Finland,_2019_January.jpg",
-    },
+    src: "/images/articles/print-the-path-journal.webp",
+    alt: "Two wind-up workers carry dark spheres along a dotted path past a gate and a printing machine.",
+    generated: "GPT Image",
   },
 } as const satisfies ArticleMeta;
 

@@ -9,13 +9,9 @@ export const article = {
   author: "Mira Voss",
   tags: ["software"],
   image: {
-    src: "/images/articles/the-ternary-hangover.jpg",
-    alt: "A dense field of railway switches and crisscrossing tracks in front of Utrecht Centraal station, under a web of overhead wires.",
-    credit: {
-      author: "KlausMiniwolf",
-      license: "CC BY-SA 4.0",
-      href: "https://commons.wikimedia.org/wiki/File:2014-10-02_13-02-44_RX100_4024_Utrecht-CS.JPG",
-    },
+    src: "/images/articles/the-ternary-hangover-journal.webp",
+    alt: "A bird examines a tangle of brass levers while three simple handles lie on the rock in front.",
+    generated: "GPT Image",
   },
 } as const satisfies ArticleMeta;
 

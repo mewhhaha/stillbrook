@@ -9,13 +9,9 @@ export const article = {
   author: "Mira Voss",
   tags: ["software", "craft"],
   image: {
-    src: "/images/articles/friction-where-the-damage-starts.jpg",
-    alt: "A round red fire alarm call point whose button sits behind a flip-up cover labeled push to open.",
-    credit: {
-      author: "Drb400atx",
-      license: "Public domain",
-      href: "https://commons.wikimedia.org/wiki/File:Proprietary-type_fire_alarm_manual_call_point.JPG",
-    },
+    src: "/images/articles/friction-where-the-damage-starts-journal.webp",
+    alt: "A keyed lever guards a heavy gate while a nearby inspection window opens freely.",
+    generated: "GPT Image",
   },
 } as const satisfies ArticleMeta;
 

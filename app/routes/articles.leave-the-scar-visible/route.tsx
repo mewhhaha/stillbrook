@@ -16,13 +16,9 @@ export const article = {
   author: "Mira Voss",
   tags: ["software", "craft"],
   image: {
-    src: "/images/articles/leave-the-scar-visible.jpg",
-    alt: "A sixteenth-century Korean tea bowl whose cracks have been repaired with seams of gold lacquer that stay plainly visible.",
-    credit: {
-      author: "Daderot",
-      license: "CC0",
-      href: "https://commons.wikimedia.org/wiki/File:Tea_bowl,_Korea,_Joseon_dynasty,_16th_century_AD,_Mishima-hakeme_type,_buncheong_ware,_stoneware_with_white_engobe_and_translucent,_greenish-gray_glaze,_gold_lacquer_-_Ethnological_Museum,_Berlin_-_DSC02061.JPG",
-    },
+    src: "/images/articles/leave-the-scar-visible-journal.webp",
+    alt: "A red-threaded leather patch marks a crack in a wooden ledger cover beside a removable clasp.",
+    generated: "GPT Image",
   },
 } as const satisfies ArticleMeta;
 

@@ -18,13 +18,9 @@ export const article = {
   author: "Mira Voss",
   tags: ["software", "craft"],
   image: {
-    src: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/First_Stack_of_Punch_Cards_%284905713747%29.jpg/1280px-First_Stack_of_Punch_Cards_%284905713747%29.jpg",
-    alt: "A tall stack of punched cards fills a wooden tray, with hundreds of individual cards visible.",
-    credit: {
-      author: "Alan Levine",
-      license: "CC BY 2.0",
-      href: "https://commons.wikimedia.org/wiki/File:First_Stack_of_Punch_Cards_(4905713747).jpg",
-    },
+    src: "/images/articles/a-gazillion-tokens-later-journal.webp",
+    alt: "A measured wooden block sits in a test jig amid scattered notes and discarded shavings.",
+    generated: "GPT Image",
   },
 } as const satisfies ArticleMeta;
 

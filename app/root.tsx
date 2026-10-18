@@ -20,9 +20,16 @@ export function Layout({ children }: { children: React.ReactNode }) {
   return <html lang="en" className="antialiased" suppressHydrationWarning><head><meta charSet="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><script dangerouslySetInnerHTML={{ __html: preferenceScript }} /><Meta /><Links /></head><body>{children}<ScrollRestoration /></body></html>;
 }
 
-export default function App() { return <div className="isolate min-h-dvh"><Outlet /></div>; }
+export default function App() {
+  return (
+    <div className="isolate min-h-dvh">
+      <a href="#main" className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50 focus:bg-paper focus:p-3">Skip to content</a>
+      <Outlet />
+    </div>
+  );
+}
 
 export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
   const notFound = isRouteErrorResponse(error) && error.status === 404;
-  return <main className="mx-auto flex min-h-dvh max-w-3xl flex-col justify-center gap-6 px-6">{notFound ? <RetryStaleRoute /> : null}<p className="font-mono text-base text-orange-700 sm:text-sm dark:text-orange-400">{notFound ? "404" : "Error"}</p><h1 className="text-balance font-display text-4xl font-medium tracking-tight text-zinc-950 dark:text-zinc-50">{notFound ? "That page has wandered off." : "Something went wrong."}</h1><a className="w-fit text-base text-zinc-700 underline decoration-orange-400 underline-offset-4 sm:text-sm dark:text-zinc-300" href="/">Return home</a></main>;
+  return <main id="main" className="mx-auto flex min-h-dvh max-w-3xl flex-col justify-center gap-6 px-6">{notFound ? <RetryStaleRoute /> : null}<p className="font-mono text-base text-accent sm:text-sm">{notFound ? "404" : "Error"}</p><h1 className="text-balance font-display text-4xl font-normal tracking-tight text-ink">{notFound ? "That page has wandered off." : "Something went wrong."}</h1><a className="journal-link w-fit" href="/">Return home</a></main>;
 }

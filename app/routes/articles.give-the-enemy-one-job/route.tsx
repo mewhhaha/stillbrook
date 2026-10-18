@@ -9,13 +9,9 @@ export const article = {
   author: "Still Brook",
   tags: ["craft"],
   image: {
-    src: "https://upload.wikimedia.org/wikipedia/commons/f/f3/Staunton_chess_set.jpg",
-    alt: "A wooden Staunton chess set and clock sit in their starting position on a board.",
-    credit: {
-      author: "Lee Daniel Crocker",
-      license: "Public domain",
-      href: "https://commons.wikimedia.org/wiki/File:Staunton_chess_set.jpg",
-    },
+    src: "/images/articles/give-the-enemy-one-job-journal.webp",
+    alt: "Three animal fighters carry distinct weapons beside an overarmed figure.",
+    generated: "GPT Image",
   },
 } as const satisfies ArticleMeta;
 

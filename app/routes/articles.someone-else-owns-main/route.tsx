@@ -9,13 +9,9 @@ export const article = {
   author: "Mira Voss",
   tags: ["software"],
   image: {
-    src: "/images/articles/someone-else-owns-main.jpg",
-    alt: "The inside of an old railway signal box, with rows of red, blue, black, and brown control levers in front of telephones and green cabinets.",
-    credit: {
-      author: "Malcolm Morley",
-      license: "Public domain",
-      href: "https://commons.wikimedia.org/wiki/File:Signal_box_inside.jpg",
-    },
+    src: "/images/articles/someone-else-owns-main-journal.webp",
+    alt: "A craftsperson offers a small wooden bird to a tall crow-headed host at a gate hung with keys.",
+    generated: "GPT Image",
   },
 } as const satisfies ArticleMeta;
 

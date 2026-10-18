@@ -18,13 +18,9 @@ export const article = {
   author: "Elias North",
   tags: ["software"],
   image: {
-    src: "/images/articles/the-functional-inheritance.jpg",
-    alt: "Aerial photograph of two rivers, the Inn and the Salzach, merging into a single stream between green banks.",
-    credit: {
-      author: "Carsten Steger",
-      license: "CC BY-SA 4.0",
-      href: "https://commons.wikimedia.org/wiki/File:Aerial_image_of_the_confluence_of_the_Inn_and_Salzach_(view_from_the_west).jpg",
-    },
+    src: "/images/articles/the-functional-inheritance-journal.webp",
+    alt: "A row of hand tools with guarded handles and return springs hangs above a workbench bowl.",
+    generated: "GPT Image",
   },
 } as const satisfies ArticleMeta;
 

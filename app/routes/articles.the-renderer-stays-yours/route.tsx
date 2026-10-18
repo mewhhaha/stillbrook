@@ -8,6 +8,11 @@ export const article = {
   published: "2026-07-15T01:00:00Z",
   author: "Mira Voss",
   tags: ["software"],
+  image: {
+    src: "/images/articles/the-renderer-stays-yours-journal.webp",
+    alt: "A fox directs a miniature theater beside a glass sphere containing a geometric wire frame.",
+    generated: "GPT Image",
+  },
 } as const satisfies ArticleMeta;
 
 export function meta() {

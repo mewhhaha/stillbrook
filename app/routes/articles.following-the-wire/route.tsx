@@ -10,13 +10,9 @@ export const article = {
   author: "Elias North",
   tags: ["software"],
   image: {
-    src: "/images/articles/following-the-wire.jpg",
-    alt: "A telephone operator sits at a manual switchboard, connecting cords among rows of jacks in a small room.",
-    credit: {
-      author: "Unknown photographer",
-      license: "Public domain",
-      href: "https://commons.wikimedia.org/wiki/File:TexasRichardson_telephoneExchangeOperator.jpg",
-    },
+    src: "/images/articles/following-the-wire-journal.webp",
+    alt: "A copper wire branches through a wooden lattice as two polished ends meet and a knot loosens.",
+    generated: "GPT Image",
   },
 } as const satisfies ArticleMeta;
 

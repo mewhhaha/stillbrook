@@ -9,13 +9,9 @@ export const article = {
   author: "Elias North",
   tags: ["software"],
   image: {
-    src: "/images/articles/comptime-behind-glass.jpg",
-    alt: "A watchmaker wearing a head-mounted magnifier bends over a small folding table, repairing a watch among rows of watches and tools.",
-    credit: {
-      author: "Yılmaz Kilim",
-      license: "CC0",
-      href: "https://commons.wikimedia.org/wiki/File:Watchmaker_(184539829).jpeg",
-    },
+    src: "/images/articles/comptime-behind-glass-journal.webp",
+    alt: "An ornate mechanism sits behind misted glass beside a clear, inspectable handle.",
+    generated: "GPT Image",
   },
 } as const satisfies ArticleMeta;
 

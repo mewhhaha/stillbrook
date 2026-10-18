@@ -9,13 +9,9 @@ export const article = {
   author: "Mira Voss",
   tags: ["software"],
   image: {
-    src: "/images/articles/the-typed-shadow.jpg",
-    alt: "Shadow puppeteers hold six painted figures against a glowing orange screen during a grand shadow play at Wat Khanon Temple.",
-    credit: {
-      author: "Paul-shy",
-      license: "CC BY-SA 4.0",
-      href: "https://commons.wikimedia.org/wiki/File:Grand_shadow_play_at_Wat_Khanon_Temple_001.jpg",
-    },
+    src: "/images/articles/the-typed-shadow-journal.webp",
+    alt: "A bird holds a brass key beside a large lock, a transparent key, and a key-shaped chalk outline.",
+    generated: "GPT Image",
   },
 } as const satisfies ArticleMeta;
 

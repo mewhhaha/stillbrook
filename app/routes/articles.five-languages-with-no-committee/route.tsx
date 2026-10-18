@@ -16,6 +16,11 @@ export const article = {
   published: "2026-07-12T22:52:00Z",
   author: "Mira Voss",
   tags: ["software"],
+  image: {
+    src: "/images/articles/five-languages-with-no-committee-journal.webp",
+    alt: "Five handmade language machines share a workbench, four compact and one overgrown with levers.",
+    generated: "GPT Image",
+  },
 } as const satisfies ArticleMeta;
 
 export function meta() {

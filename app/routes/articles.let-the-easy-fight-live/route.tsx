@@ -9,13 +9,9 @@ export const article = {
   author: "Still Brook",
   tags: ["craft"],
   image: {
-    src: "/images/articles/let-the-easy-fight-live.jpg",
-    alt: "Thomas Eakins’s painting of a boxer resting on a stool between rounds while his corner tends to him and a crowd watches from the dark arena.",
-    credit: {
-      author: "Thomas Eakins",
-      license: "Public domain",
-      href: "https://commons.wikimedia.org/wiki/File:Thomas_Eakins_-_Between_Rounds_(1890s).jpg",
-    },
+    src: "/images/articles/let-the-easy-fight-live-journal.webp",
+    alt: "Three miniature stone rooms show an open encounter, a raised balcony, and a darkened chamber.",
+    generated: "GPT Image",
   },
 } as const satisfies ArticleMeta;
 

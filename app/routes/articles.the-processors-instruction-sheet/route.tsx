@@ -9,13 +9,9 @@ export const article = {
   author: "Elias North",
   tags: ["software"],
   image: {
-    src: "/images/articles/the-processors-instruction-sheet.jpg",
-    alt: "A hand holds a small exposed RISC-V prototype chip mounted in a black carrier.",
-    credit: {
-      author: "Derrick Coetzee",
-      license: "CC0 1.0",
-      href: "https://commons.wikimedia.org/wiki/File:Yunsup_Lee_holding_RISC_V_prototype_chip.jpg",
-    },
+    src: "/images/articles/the-processors-instruction-sheet-journal.webp",
+    alt: "Rows of steel sockets hang beside an iron engine with a large flywheel and a small measuring dial.",
+    generated: "GPT Image",
   },
 } as const satisfies ArticleMeta;
 

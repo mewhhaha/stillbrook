@@ -16,13 +16,9 @@ export const article = {
   author: "Elias North",
   tags: ["software"],
   image: {
-    src: "/images/articles/the-proof-budget.jpg",
-    alt: "A threaded metal go/no-go gauge with green and red ends resting beside a smooth plug gauge.",
-    credit: {
-      author: "Glenn McKechnie",
-      license: "CC BY-SA 3.0",
-      href: "https://commons.wikimedia.org/wiki/File:GaugePlugThreadGoNoGo.jpg",
-    },
+    src: "/images/articles/the-proof-budget-journal.webp",
+    alt: "A hand checks a metal housing with a plug gauge beside calipers, measuring blocks, and stacked brass discs.",
+    generated: "GPT Image",
   },
 } as const satisfies ArticleMeta;
 

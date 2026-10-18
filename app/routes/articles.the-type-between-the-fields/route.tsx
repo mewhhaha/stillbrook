@@ -8,6 +8,11 @@ export const article = {
   published: "2026-08-11T09:10:00Z",
   author: "Mira Voss",
   tags: ["software"],
+  image: {
+    src: "/images/articles/the-type-between-the-fields-journal.webp",
+    alt: "A loose row of speckled eggs and a notched brass gauge sit beside eggs held in a divided cloth case.",
+    generated: "GPT Image",
+  },
 } as const satisfies ArticleMeta;
 
 export function meta() {

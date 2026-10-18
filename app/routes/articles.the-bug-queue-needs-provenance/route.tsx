@@ -9,13 +9,9 @@ export const article = {
   author: "Mira Voss",
   tags: ["software", "craft"],
   image: {
-    src: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Mail_sorting_room%2C_U.S._Post_Office%2C_Washington%2C_D.C.%29_-_National_Photo_Co.%2C_Washington%2C_D.C_LCCN90709842.jpg/1280px-Mail_sorting_room%2C_U.S._Post_Office%2C_Washington%2C_D.C.%29_-_National_Photo_Co.%2C_Washington%2C_D.C_LCCN90709842.jpg",
-    alt: "Postal workers stand at long sorting cases filled with pigeonholes inside a Washington, D.C. post office mail room in 1920.",
-    credit: {
-      author: "National Photo Company Collection",
-      license: "Public domain",
-      href: "https://commons.wikimedia.org/wiki/File:Mail_sorting_room,_U.S._Post_Office,_Washington,_D.C.)_-_National_Photo_Co.,_Washington,_D.C_LCCN90709842.jpg",
-    },
+    src: "/images/articles/the-bug-queue-needs-provenance-journal.webp",
+    alt: "Tagged bug specimens sit in one basket beside an overflowing tray and a sorting sieve.",
+    generated: "GPT Image",
   },
 } as const satisfies ArticleMeta;
 

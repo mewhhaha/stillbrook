@@ -8,6 +8,11 @@ export const article = {
   published: "2026-07-14T09:05:00Z",
   author: "Mira Voss",
   tags: ["web", "craft"],
+  image: {
+    src: "/images/articles/the-tree-before-the-pixels-journal.webp",
+    alt: "A visitor with a white cane explores raised dots beneath an exposed wooden framework beside a painted checkout panel.",
+    generated: "GPT Image",
+  },
 } as const satisfies ArticleMeta;
 
 export function meta() {

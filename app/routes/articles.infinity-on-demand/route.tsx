@@ -9,13 +9,9 @@ export const article = {
   author: "Elias North",
   tags: ["software"],
   image: {
-    src: "/images/articles/infinity-on-demand.jpg",
-    alt: "Katsushika Hokusai’s print of a towering blue wave curling over small boats with Mount Fuji beneath the horizon.",
-    credit: {
-      author: "Katsushika Hokusai",
-      license: "Public domain",
-      href: "https://commons.wikimedia.org/wiki/File:Tsunami_by_hokusai_19th_century.jpg",
-    },
+    src: "/images/articles/infinity-on-demand-journal.webp",
+    alt: "A hand-cranked dispenser feeds a few glass seeds into a tray while one remains caught in a sieve.",
+    generated: "GPT Image",
   },
 } as const satisfies ArticleMeta;
 

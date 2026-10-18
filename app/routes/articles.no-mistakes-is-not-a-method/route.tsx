@@ -9,13 +9,9 @@ export const article = {
   author: "Still Brook",
   tags: ["craft"],
   image: {
-    src: "/images/articles/no-mistakes-is-not-a-method.jpg",
-    alt: "Close-up of a red emergency stop button on a yellow ring, mounted on the metal control panel of a CNC machine.",
-    credit: {
-      author: "Flygklubben",
-      license: "CC BY-SA 4.0",
-      href: "https://commons.wikimedia.org/wiki/File:Emergency_stop_button_on_a_HAAS_CNC.jpg",
-    },
+    src: "/images/articles/no-mistakes-is-not-a-method-journal.webp",
+    alt: "A cutting machine holds a metal workpiece while a hand hovers above its stop button.",
+    generated: "GPT Image",
   },
 } as const satisfies ArticleMeta;
 

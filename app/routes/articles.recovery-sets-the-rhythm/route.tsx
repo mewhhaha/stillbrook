@@ -9,13 +9,9 @@ export const article = {
   author: "Still Brook",
   tags: ["craft"],
   image: {
-    src: "https://upload.wikimedia.org/wikipedia/commons/a/a9/Metronome_1.jpg",
-    alt: "A wooden mechanical metronome sits beside the body of an acoustic guitar.",
-    credit: {
-      author: "Gordon Joly",
-      license: "CC BY-SA 1.0",
-      href: "https://commons.wikimedia.org/wiki/File:Metronome_1.jpg",
-    },
+    src: "/images/articles/recovery-sets-the-rhythm-journal.webp",
+    alt: "A cloaked hunter advances toward a horned demon past glowing fruit, while a supply cache waits beside stone steps.",
+    generated: "GPT Image",
   },
 } as const satisfies ArticleMeta;
 

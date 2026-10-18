@@ -17,13 +17,9 @@ export const article = {
   author: "Mira Voss",
   tags: ["software"],
   image: {
-    src: "/images/articles/building-block-economy.jpg",
-    alt: "Vintage wooden letterpress type blocks of many sizes packed tightly together, seen from above.",
-    credit: {
-      author: "Michellecornelison",
-      license: "CC BY-SA 4.0",
-      href: "https://commons.wikimedia.org/wiki/File:Wood_letterpress_type.jpg",
-    },
+    src: "/images/articles/building-block-economy-journal.webp",
+    alt: "Interchangeable wooden blocks assemble into a hand tool as their delivery rail folds away.",
+    generated: "GPT Image",
   },
 } as const satisfies ArticleMeta;
 

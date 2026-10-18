@@ -9,13 +9,9 @@ export const article = {
   author: "Mira Voss",
   tags: ["software"],
   image: {
-    src: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Webcam_01.jpg/1280px-Webcam_01.jpg",
-    alt: "A black Logitech webcam sits on a desk, with its camera lens centered between microphone openings.",
-    credit: {
-      author: "Pmwiki1",
-      license: "CC0 1.0",
-      href: "https://commons.wikimedia.org/wiki/File:Webcam_01.jpg",
-    },
+    src: "/images/articles/a-button-the-page-cannot-fake-journal.webp",
+    alt: "A hand presses a brass button built into a webcam shutter while a false button lies aside.",
+    generated: "GPT Image",
   },
 } as const satisfies ArticleMeta;
 

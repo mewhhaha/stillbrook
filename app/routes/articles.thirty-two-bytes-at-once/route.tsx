@@ -9,13 +9,9 @@ export const article = {
   author: "Elias North",
   tags: ["software"],
   image: {
-    src: "/images/articles/thirty-two-bytes-at-once.jpg",
-    alt: "Two eight-oared rowing crews pull side by side past a crowded shoreline during the men's eight final at the 1928 Amsterdam Olympics.",
-    credit: {
-      author: "Underwood & Underwood",
-      license: "Public domain",
-      href: "https://commons.wikimedia.org/wiki/File:1928_Summer_Olympics_men%27s_eight_finals,_U.S_beats_G.B,_photo_by_Underwood_%26_Underwood.jpg",
-    },
+    src: "/images/articles/thirty-two-bytes-at-once-journal.webp",
+    alt: "A row of needles hangs above a grayscale paper strip and small bowls of differently shaded grains.",
+    generated: "GPT Image",
   },
 } as const satisfies ArticleMeta;
 

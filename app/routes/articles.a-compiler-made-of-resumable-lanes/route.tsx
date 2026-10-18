@@ -16,13 +16,9 @@ export const article = {
   author: "Elias North",
   tags: ["software"],
   image: {
-    src: "/images/articles/a-compiler-made-of-resumable-lanes.jpg",
-    alt: "An IBM 082 punch-card sorter stands beneath a row of output bins holding colored cards.",
-    credit: {
-      author: "waelder",
-      license: "CC BY-SA 3.0",
-      href: "https://commons.wikimedia.org/wiki/File:Punch_card_sorter.JPG",
-    },
+    src: "/images/articles/a-compiler-made-of-resumable-lanes-journal.webp",
+    alt: "Beads pause in parallel copper lanes before a hand assembles them into a wooden cylinder.",
+    generated: "GPT Image",
   },
 } as const satisfies ArticleMeta;
 

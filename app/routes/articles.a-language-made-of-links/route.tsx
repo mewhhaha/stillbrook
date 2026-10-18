@@ -9,13 +9,9 @@ export const article = {
   author: "Mira Voss",
   tags: ["software"],
   image: {
-    src: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Master_link_pliers.jpg/1280px-Master_link_pliers.jpg",
-    alt: "A pair of bicycle master-link pliers lies beside a short section of chain and a removable connecting link.",
-    credit: {
-      author: "Armchair",
-      license: "CC0 1.0",
-      href: "https://commons.wikimedia.org/wiki/File:Master_link_pliers.jpg",
-    },
+    src: "/images/articles/a-language-made-of-links-journal.webp",
+    alt: "Copper loops connect jars and reeds, with one loosened link beside a hand lens.",
+    generated: "GPT Image",
   },
 } as const satisfies ArticleMeta;
 
