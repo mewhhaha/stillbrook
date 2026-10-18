@@ -52,7 +52,7 @@ export function ArticleLayout({ article, readingTime, children }: ArticleLayoutP
               <FixationToggle />
             </div>
           </div>
-          <header className="mt-9 border-b border-ink/20 pb-8 sm:mt-14">
+          <header className="mt-9 border-b border-rule pb-8 sm:mt-14">
             <p className="flex flex-wrap items-baseline gap-x-2 gap-y-1 font-mono text-xs text-muted">
               <time dateTime={article.published}>{formatDay(article.published)}</time>
               {readingTime && <span>· {readingTime}</span>}
@@ -61,7 +61,7 @@ export function ArticleLayout({ article, readingTime, children }: ArticleLayoutP
                   {"· "}
                   <a
                     href={update.historyUrl}
-                    className="underline decoration-ink/25 underline-offset-4 hover:text-accent"
+                    className="underline decoration-rule underline-offset-4 hover:text-accent"
                   >
                     Updated <time dateTime={update.updated}>{formatDay(update.updated)}</time>
                   </a>
@@ -77,7 +77,7 @@ export function ArticleLayout({ article, readingTime, children }: ArticleLayoutP
             <ArticleHero image={article.image} className="mt-10" />
           )}
           <div className="mt-10 max-w-[65ch]">{children}</div>
-          <footer className="mt-16 flex flex-wrap items-baseline justify-between gap-x-8 gap-y-5 border-t border-ink/20 pt-7">
+          <footer className="mt-16 flex flex-wrap items-baseline justify-between gap-x-8 gap-y-5 border-t border-rule pt-7">
             <p className="text-base text-muted sm:text-sm">Written by {article.author}</p>
             <ul role="list" className="flex flex-wrap gap-x-5 gap-y-3">
               {article.tags.map((tag) => (

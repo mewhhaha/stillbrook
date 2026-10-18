@@ -105,6 +105,7 @@
   --color-ink: var(--journal-ink);
   --color-muted: var(--journal-muted);
   --color-accent: var(--journal-accent);
+  --color-rule: var(--journal-rule);
 }
 /* Dark mode: an explicit data-theme cookie override wins; otherwise follow the system preference. */
 @custom-variant dark {
@@ -114,15 +115,17 @@
   }
 }
 :root {
-  --journal-paper: #f3f0e6;
-  --journal-ink: #302c25;
-  --journal-muted: #6a655b;
-  --journal-accent: #9c4026;
+  --journal-paper: #f4f0e6;
+  --journal-ink: #29251f;
+  --journal-muted: #575147;
+  --journal-accent: #84351f;
+  --journal-rule: #a69a83;
   @variant dark {
-    --journal-paper: #24221e;
-    --journal-ink: #eee9df;
-    --journal-muted: #b9b2a5;
-    --journal-accent: #e4a080;
+    --journal-paper: #211f1b;
+    --journal-ink: #f2ebdd;
+    --journal-muted: #c9c1b2;
+    --journal-accent: #f0a078;
+    --journal-rule: #8d8474;
   }
 }
 @utility journal-container {
@@ -155,7 +158,7 @@
   color: var(--journal-accent);
   font-size: 1rem;
   padding-bottom: 2px;
-  border-bottom: 1px solid color-mix(in srgb, var(--journal-accent) 35%, transparent);
+  border-bottom: 1px solid color-mix(in srgb, var(--journal-accent) 65%, transparent);
   @variant hover { border-bottom-color: currentColor; }
   @media (min-width: 40rem) { font-size: 0.875rem; }
 }
@@ -184,6 +187,14 @@
   mask-composite: intersect;
 }
 .journal-menu summary::-webkit-details-marker { display: none; }
+/* The original image reserves its space and remains available without WebGL. */
+.kuwahara-image { position: relative; display: block; }
+.kuwahara-image > picture { display: contents; object-fit: inherit; border-radius: inherit; }
+.kuwahara-image > picture > img,
+.kuwahara-image > canvas { display: block; width: 100%; height: 100%; object-fit: inherit; border-radius: inherit; }
+.kuwahara-image canvas { position: absolute; inset: 0; pointer-events: none; visibility: hidden; }
+.kuwahara-image[data-filtered] img { opacity: 0; }
+.kuwahara-image[data-filtered] canvas { visibility: visible; }
 @utility prose {
   color: var(--journal-ink); font-size: var(--text-base); line-height: --spacing(7);
   & > * + * { margin-top: --spacing(6); }

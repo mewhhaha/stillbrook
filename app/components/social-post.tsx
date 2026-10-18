@@ -1,5 +1,6 @@
 import { formatDate, type ArticleMeta } from "../article";
 import { Figure } from "./figure";
+import { KuwaharaImage } from "./kuwahara-image";
 
 export type SocialPostQuote = {
   author: string;
@@ -83,7 +84,7 @@ export function SocialPost({
       <article className="@container mx-auto flex max-w-[600px] flex-col gap-4 rounded-[min(4vw,var(--radius-xl))] border border-zinc-950/10 bg-white p-4 text-zinc-950 dark:border-white/10 dark:bg-zinc-950 dark:text-zinc-50 sm:p-5">
         <header className="flex items-start gap-3">
           {avatar ? (
-            <img
+            <KuwaharaImage
               src={avatar}
               alt=""
               width={200}
@@ -127,7 +128,7 @@ export function SocialPost({
 
         {media ? (
           <a href={media.href ?? href} className="rounded-[min(3vw,var(--radius-lg))]">
-            <img
+            <KuwaharaImage
               src={media.src}
               alt={media.alt}
               width={media.width}
@@ -144,7 +145,7 @@ export function SocialPost({
           >
             <div className="flex min-w-0 items-center gap-2">
               {quotedPost.avatar ? (
-                <img
+                <KuwaharaImage
                   src={quotedPost.avatar}
                   alt=""
                   width={200}

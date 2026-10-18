@@ -9,7 +9,7 @@ export function Figure({ caption, children }: FigureProps) {
     <figure>
       {children}
       {caption ? (
-        <figcaption className="mt-3 text-center font-mono text-xs text-zinc-500">{caption}</figcaption>
+        <figcaption className="mt-3 text-center font-mono text-xs text-muted">{caption}</figcaption>
       ) : null}
     </figure>
   );

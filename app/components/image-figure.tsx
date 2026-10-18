@@ -1,3 +1,5 @@
+import { KuwaharaImage } from "./kuwahara-image";
+
 export type ImageCredit = {
   /** The photographer or artist as they ask to be named. */
   author: string;
@@ -25,7 +27,7 @@ type ImageFigureProps = {
 export function ImageFigure({ src, alt, caption, credit, aspectRatio }: ImageFigureProps) {
   return (
     <figure>
-      <img
+      <KuwaharaImage
         src={src}
         alt={alt}
         loading="lazy"
@@ -33,11 +35,11 @@ export function ImageFigure({ src, alt, caption, credit, aspectRatio }: ImageFig
         className="w-full rounded-[min(1vw,12px)] object-cover outline-1 -outline-offset-1 outline-black/5 dark:outline-white/10"
       />
       {caption || credit ? (
-        <figcaption className="mt-3 text-center font-mono text-xs text-zinc-500">
+        <figcaption className="mt-3 text-center font-mono text-xs text-muted">
           {caption}
           {caption && credit ? " · " : null}
           {credit ? (
-            <a href={credit.href} className="text-zinc-400 hover:text-zinc-600 dark:hover:text-zinc-300">
+            <a href={credit.href} className="underline decoration-accent/60 underline-offset-4 hover:text-accent">
               {credit.author}, {credit.license}
             </a>
           ) : null}

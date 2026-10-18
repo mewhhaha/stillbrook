@@ -2,6 +2,7 @@ import { Form, Link, unstable_getRequest } from "react-router";
 import { formatDay } from "../../article";
 import { articles, articlesByTag } from "../../articles.server";
 import { ArticleHero } from "../../components/article-hero";
+import { KuwaharaImage } from "../../components/kuwahara-image";
 import { SiteFooter, SiteHeader } from "../../components/site-shell";
 
 export function meta() {
@@ -61,15 +62,13 @@ export function ServerComponent() {
             <Link to="/#archive" className="journal-link">Open the notebook <span aria-hidden="true">↘</span></Link>
           </div>
           <figure className="min-w-0">
-            <picture className="journal-specimen block">
-              <source data-dark-image srcSet="/images/journal/brook-machine-dark.webp" media={darkImageMedia} />
-              <img
-                src="/images/journal/brook-machine.webp"
-                width="1536" height="1024" fetchPriority="high"
-                alt="An engraved computer on spindly legs beside a brook, with a bird, a leafy twig, and a curling paper tape."
-                className="w-full mix-blend-multiply dark:mix-blend-normal"
-              />
-            </picture>
+            <KuwaharaImage
+              sources={<source data-dark-image srcSet="/images/journal/brook-machine-dark.webp" media={darkImageMedia} />}
+              src="/images/journal/brook-machine.webp"
+              width="1536" height="1024" fetchPriority="high"
+              alt="An engraved computer on spindly legs beside a brook, with a bird, a leafy twig, and a curling paper tape."
+              className="journal-specimen w-full mix-blend-multiply dark:mix-blend-normal"
+            />
             <figcaption className="flex justify-between gap-4 pt-2 font-mono text-xs text-muted">
               <span>Fig. 01 — A machine for wandering thoughts.</span><span aria-hidden="true">↳</span>
             </figcaption>
@@ -78,7 +77,7 @@ export function ServerComponent() {
 
         {latest && (
           <section aria-labelledby="featured-title" className="grid gap-6 border-y border-ink/70 py-8 md:grid-cols-[7rem_1fr] md:gap-10 lg:grid-cols-[10rem_1fr_16rem]">
-            <div className="flex items-start justify-between gap-4 md:flex-col md:border-r md:border-ink/20">
+            <div className="flex items-start justify-between gap-4 md:flex-col md:border-r md:border-rule">
               <p className="journal-kicker text-accent">Latest essay</p>
               <p className="font-mono text-xs text-muted"><time dateTime={latest.published}>{formatDay(latest.published)}</time></p>
               <p className="mt-auto text-5xl text-accent max-md:hidden" aria-hidden="true">✳</p>
@@ -101,7 +100,7 @@ export function ServerComponent() {
             <h2 id="archive-title" className="font-display text-3xl font-normal tracking-tight">Pages from the notebook</h2>
             <p className="font-mono text-xs text-muted">{archiveCount}</p>
           </div>
-          <div className="mt-6 flex flex-col gap-3 border-b border-ink/20 md:flex-row md:items-center md:justify-between md:gap-8">
+          <div className="mt-6 flex flex-col gap-3 border-b border-rule md:flex-row md:items-center md:justify-between md:gap-8">
             <nav aria-label="Filter essays by topic" className="flex min-w-0 gap-6 overflow-x-auto text-base sm:text-sm">
               <Link className="journal-topic" aria-current={!topic && "page"} to={archiveUrl("")}>All essays</Link>
               {articlesByTag.map(({ tag }) => (
@@ -116,7 +115,7 @@ export function ServerComponent() {
             </Form>
           </div>
           <p className="sr-only" role="status" aria-live="polite">{matches.length} essays found. Page {page} of {pageCount}.</p>
-          <ol role="list" className="divide-y divide-ink/20 border-b border-ink/20">
+          <ol role="list" className="divide-y divide-rule border-b border-rule">
             {visible.map((article, index) => (
               <li key={article.slug}>
                 <Link to={article.href} className="group grid grid-cols-[1.8rem_1fr_1rem] items-center gap-x-3 gap-y-3 py-6 sm:grid-cols-[4rem_1fr_7rem_1rem] sm:gap-x-6">

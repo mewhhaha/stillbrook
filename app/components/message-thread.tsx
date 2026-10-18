@@ -1,4 +1,5 @@
 import { Figure } from "./figure";
+import { KuwaharaImage } from "./kuwahara-image";
 
 export type ThreadMessage = {
   from: string;
@@ -53,7 +54,7 @@ export function MessageThread({ messages, caption }: MessageThreadProps) {
             >
               {firstOfRun ? (
                 message.avatar ? (
-                  <img src={message.avatar} alt="" className="size-8 shrink-0 rounded-full object-cover" />
+                  <KuwaharaImage src={message.avatar} alt="" className="size-8 shrink-0 rounded-full object-cover" />
                 ) : (
                   <span
                     aria-hidden="true"

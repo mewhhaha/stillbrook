@@ -1,5 +1,6 @@
 import { Link } from "react-router";
 import type { ArticleImage } from "../article";
+import { KuwaharaImage } from "./kuwahara-image";
 
 type ArticleHeroProps = {
   image: ArticleImage;
@@ -18,14 +19,14 @@ export function ArticleHero({ image, className, href, linkLabel }: ArticleHeroPr
     attribution = `Illustration generated with ${image.generated}`;
   } else {
     attribution = (
-      <a href={image.credit.href} className="underline decoration-ink/20 underline-offset-4 hover:text-accent">
+      <a href={image.credit.href} className="underline decoration-rule underline-offset-4 hover:text-accent">
         {image.credit.author}, {image.credit.license}
       </a>
     );
   }
 
   let illustration = (
-    <img src={image.src} alt={image.alt} width="1536" height="1024" loading={loading} className={imageClass} />
+    <KuwaharaImage src={image.src} alt={image.alt} width="1536" height="1024" loading={loading} className={imageClass} />
   );
   if (href) {
     illustration = <Link to={href} aria-label={linkLabel}>{illustration}</Link>;
