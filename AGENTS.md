@@ -1,7 +1,5 @@
 # Writing articles
 
-Read STYLE.md before drafting or editing any article — it defines the voice (including the "Sounding like a person" rules and its pre-submit checklist), structure, metadata, and which illustration component fits which job. The checklist below is the mechanical part every new article must complete.
-
 ## Every new article needs a hero image
 
 Use a distinct field-journal illustration that fits the essay's subject: fine copperplate engraving, muted brass, terracotta, and olive, with a transparent background. Use `public/images/journal/brook-machine.webp` as the style reference and the prompt set in `artwork/articles/` for continuity. Generate raster artwork with GPT Image; preserve its alpha channel and check it on both light and dark pages. Do not substitute SVG or a generic reused image.
@@ -24,13 +22,13 @@ The layout renders the illustration and its generation attribution, and emits it
 
 ## Illustrations
 
-Do not hand-roll bordered-card "diagrams". Pick from the shared components by job (see STYLE.md → Illustrations for the full decision list): `BarChart`/`LineChart` for numbers, `NumberLine` for values against a boundary or each other on one axis, `DataTable` for enumerable facts and matrices, `Compare` for attribute contrasts, `FlowSequence` for ordered progressions, `FeedbackLoop` for ordered cycles that feed back into their first stage, `AnnotatedCode` for line-anchored anatomy of one snippet, `MemoryBoxes` for records sharing or pointing at each other, `DiffReview` for a change under review, `MessageThread` for short dialogues, `SocialPost` for a static source-linked X or Bluesky post, `ImageFigure` for in-flow photographs — and, in an essay that is already joking, at most one genuinely fitting funny GIF (also `ImageFigure`, animated GIFs go to `public/images/articles/<slug>-<name>.gif`, alt text describing the motion, source page credited; see STYLE.md for the bar it must clear). A bespoke route-local figure is allowed only for genuinely spatial or skeuomorphic content no shared form can show, and its caption must describe what the visual actually renders.
+Do not hand-roll bordered-card "diagrams". Pick from the shared components by job: `BarChart`/`LineChart` for numbers, `NumberLine` for values against a boundary or each other on one axis, `DataTable` for enumerable facts and matrices, `Compare` for attribute contrasts, `FlowSequence` for ordered progressions, `FeedbackLoop` for ordered cycles that feed back into their first stage, `AnnotatedCode` for line-anchored anatomy of one snippet, `MemoryBoxes` for records sharing or pointing at each other, `DiffReview` for a change under review, `MessageThread` for short dialogues, `SocialPost` for a static source-linked X or Bluesky post, `ImageFigure` for in-flow photographs — and, in an essay that is already joking, at most one genuinely fitting funny GIF (also `ImageFigure`, animated GIFs go to `public/images/articles/<slug>-<name>.gif`, alt text describing the motion, source page credited). A bespoke route-local figure is allowed only for genuinely spatial or skeuomorphic content no shared form can show, and its caption must describe what the visual actually renders.
 
 ## Validation
 
 Run `pnpm typecheck` and `pnpm validate` before committing. Also check the two layout rules writers keep missing: the body must open with at least one paragraph of prose (the hero image is already the article's first visual — never a code block or figure directly under it), and non-prose blocks never stack back to back.
 
-Run the STYLE.md pre-submit checklist as a separate editing pass over the finished draft — not from memory while writing. Drafts checked only during writing consistently ship extra contrast scaffolds ("X is not Y. It is Z." and its semicolon form); the count only comes out right when a second pass reads the finished text cold.
+Reread the finished draft in a separate editing pass.
 
 # Cloudflare Workers
 

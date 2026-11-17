@@ -1,0 +1,10 @@
+{
+  "styleReference": "public/images/journal/brook-machine.webp",
+  "entries": [
+    {
+      "slug": "cancel-the-photo-import",
+      "output": "public/images/articles/cancel-the-photo-import-journal.webp",
+      "prompt": "1536 by 1024 landscape, genuine transparent background. Field journal copperplate engraving with fine precise ink hatching and muted brass, olive and terracotta washes as in brook-machine. A little photographic darkroom drying rack: three photographic prints of the same kingfisher diving, in successive poses, suspended by small wooden clips from a brass rod between two supports. Below, one empty enamel developing tray and a pair of tongs resting on its lip. Entire apparatus centered and visible, wide empty margins. No text, labels, border, backdrop or diagrams. Keep prints opaque and spaces between them transparent."
+    }
+  ]
+}

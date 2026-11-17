@@ -36,7 +36,7 @@ The workspace enforces `minimumReleaseAge: 1440`, so dependency updates select t
 
 The field-journal homepage and article pages share a paper/ink palette, navigation, and reading controls. The archive shows 12 essays per page; `?topic=software`, `?q=compiler`, and `?page=2` compose into shareable filters. Search is a GET form and the full index works without JavaScript. Site illustrations live in `public/images/journal/`, outside the article-image upload workflow; the browser selects the light or dark artwork without downloading both. The approved HTML concept and homepage image prompts are in `mockups/field-journal/`. Article illustrations use `public/images/articles/<slug>-journal.webp` and the existing R2 upload workflow; their prompt set is in `artwork/articles/`. Metadata records `generated: "GPT Image"` instead of a photograph credit. The full 3:2 illustrations use genuine alpha transparency and sit directly on the page in both themes.
 
-Write in the voice described in [STYLE.md](STYLE.md) — it covers titles, structure, and how to use the components and code blocks well.
+See [AGENTS.md](AGENTS.md) for the article illustration and validation checklist.
 
 Minimal route shape:
 
