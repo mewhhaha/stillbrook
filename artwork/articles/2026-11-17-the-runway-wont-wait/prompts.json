@@ -1,0 +1,15 @@
+{
+  "styleReference": "public/images/journal/brook-machine.webp",
+  "entries": [
+    {
+      "slug": "the-runway-wont-wait",
+      "output": "public/images/articles/the-runway-wont-wait-journal.webp",
+      "prompt": "Transparent landscape hero engraving 1536x1024. Match the reference's fine copperplate line work and muted brass, terracotta and olive. A fanciful couture runway in miniature atop an antique film camera. A tall fashion model mid-turn on its top wears a sculptural vermilion pleated evening coat flaring to expose its olive lining. A strip of perforated film flows from the camera onto a tidy reel. Spare elegant composition. The silhouette is complete, ample transparent margin on all sides, no frame, no lettering, no opaque background. Full object, isolated, tactile engraving on genuinely transparent alpha."
+    },
+    {
+      "slug": "the-runway-wont-wait",
+      "output": "public/images/articles/the-runway-wont-wait-contact.webp",
+      "prompt": "An editorial runway photographer's contact sheet, exactly FOUR equal columns by TWO equal rows, each cell one full-bleed 3:4 fashion photograph. Straight aligned cuts at 25%, 50%, 75% width and 50% height, no gutters, no borders, NO typography, no film markings. Overall landscape 1536x1024. Eight successive studies of the SAME adult fashion model with slick dark hair wearing the same vermilion sculptural pleated coat with broad olive silk lining and black shoes in the same grey concrete atelier with warm backstage lighting and the same side camera angle. Ordering left-to-right top row then bottom row. Pose progression: approaches in profile, pauses, begins turning, coat lifting, broad flare opens, fully open olive lining, lining falls, turns away. Keep entire person centered in each panel, show feet and head with breathing room. This is an eight-image visual sequence for scrubbing through a simulated live preview; composition consistent and individual poses clearly different. Photographic, beautiful couture, genuine fabric movement."
+    }
+  ]
+}
